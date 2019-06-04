@@ -1,0 +1,13 @@
+.Header__Wrapper{
+    text-align:center;
+    padding:1em;
+    margin-bottom:1em;
+}
+
+.Header--Title{
+    letter-spacing: .7em;
+    font-size:4rem;
+    text-shadow: 1px 1px 3px #000;
+    font-family:sans-serif;
+}
+

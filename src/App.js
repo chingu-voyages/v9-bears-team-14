@@ -1,11 +1,15 @@
 import React from 'react';
+import Map from './Map';
+import Header from './Header';
 
-import './App.css';
 
 function App() {
   return (
     <div className="App">
-      GeoFood
+      <div className="Container">
+        <Header/>
+          <Map/>
+      </div>
     </div>
   );
 }
