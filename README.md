@@ -3,3 +3,4 @@ Add-project-description-here | Voyage-9 | https://chingu.io/
 
 # Team Members
 Regina McGuire
+Brian Trang
