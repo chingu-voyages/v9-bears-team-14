@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # v9-bears-team-14
 Add-project-description-here | Voyage-9 | https://chingu.io/
 
@@ -6,6 +7,8 @@ Add-project-description-here | Voyage-9 | https://chingu.io/
 Regina McGuire
 Brian Trang
 =======
+=======
+>>>>>>> Initial commit from Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -74,4 +77,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<<<<<<< HEAD
 >>>>>>> b4ca8ce... Initial commit from Create React App
+=======
+>>>>>>> Initial commit from Create React App
