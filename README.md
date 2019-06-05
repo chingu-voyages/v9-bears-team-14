@@ -6,8 +6,7 @@ Add-project-description-here | Voyage-9 | https://chingu.io/
 Regina McGuire
 Brian Trang
 =======
-=======
->>>>>>> Initial commit from Create React App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
