@@ -1,3 +1,15 @@
+/*reset CSS*/
+* {
+	margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+/*to allow easy conversion of px to REM */
+html{
+  font-size:10px;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,6 +17,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color:#dfe1e6;
 }
 
 code {
