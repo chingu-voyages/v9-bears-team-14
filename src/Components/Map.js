@@ -83,18 +83,34 @@ const NOSUPPORT_STYLE={
       super(props);
       this.state={
         selected:null,
-        loading:false
+        loading:false,
+        recipes:[]
       }
       
     }
+
+    /**
+     * @function - isCountrySupported - this function checks if country selected is supported by themealdb api.
+     * @param {string} - name - name of country clicked
+     * @return {boolean} - true if country is supported by api, false if not supported by api
+     */
+    isCountrySupported =(name)=>{
+      return SUPPORTED.hasOwnProperty(name);
+    }
   
+    /**
+     * @function - getCountryRecipes - this async function sets the country selected based on user's click and performs an async GET request to retrieve selected country's recipes
+     * @param {string} - name - name of country clicked
+     */
     getCountryRecipes = async (name)=>{
       console.log(name)
-      if(SUPPORTED.hasOwnProperty(name)){     
+      if(this.isCountrySupported(name)){     
         this.setState({selected:name})
         try{
           const response = await axios.get(`/api/countries/${SUPPORTED[name]}`);
           console.log('from the backend: ',response);
+          this.setState({recipes:response.data})
+
         }
         catch(error){
           console.log(error);
