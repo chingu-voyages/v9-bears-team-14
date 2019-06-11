@@ -8,7 +8,72 @@ import {
   Geography,
 } from "react-simple-maps"
 
+/**This is a hard coded map for what countries the themealapi supports */
+const SUPPORTED={
+  "USA": "American",
+  "GBR": "British",
+  "CAN": "Canadian",
+  "CHN": "Chinese",
+  "NLD":"Dutch",
+  "EGY":"Egyptian",
+  "FRA":"French",
+  "GRC":"Greek",
+  "IND":"Indian",
+  "IRL":"Irish",
+  "ITA":"Italian",
+  "JAM":"Jamaican",
+  "JPN":"Japanese",
+  "KEN":"Kenyan",
+  "MYS":"Malaysian",
+  "MEX":"Mexican",
+  "MAR":"Moroccan",
+  "RUS":"Russian",
+  "ESP":"Spanish",
+  "THA":"Thai",
+  "VNM":"Vietnamese"
+}
 
+const SUPPORTED_STYLE={
+  default: {
+    fill: "#32CD32",
+    stroke: "#607D8B",
+    strokeWidth: 0.75,
+    outline: "none"
+  },
+  hover: {
+    fill: "#FF5722",
+    stroke: "#607D8B",
+    strokeWidth: 0.75,
+    outline: "none",
+  },
+  pressed: {
+    fill: "#FF5722",
+    stroke: "#607D8B",
+    strokeWidth: 0.75,
+    outline: "none",
+  },
+}
+
+const NOSUPPORT_STYLE={
+  default: {
+    fill: "#ECEFF1",        // any country that is NOT-supported will shaded gray
+    stroke: "#607D8B",
+    strokeWidth: 0.75,
+    outline: "none"
+  },
+  hover: {
+    fill: "#ECEFF1",
+    stroke: "#607D8B",
+    strokeWidth: 0.75,
+    outline: "none",
+  },
+  pressed: {
+    fill: "#ECEFF1",
+    stroke: "#607D8B",
+    strokeWidth: 0.75,
+    outline: "none",
+  },
+}
   class Map extends Component {
 
     constructor(props){
@@ -48,26 +113,7 @@ import {
                     geography={geography}
                     projection={projection}
                     onClick={()=>this.setCountryName(geography.properties.name)}
-                    style={{
-                      default: {
-                        fill: "#ECEFF1",
-                        stroke: "#607D8B",
-                        strokeWidth: 0.75,
-                        outline: "none"
-                      },
-                      hover: {
-                        fill: "#607D8B",
-                        stroke: "#607D8B",
-                        strokeWidth: 0.75,
-                        outline: "none",
-                      },
-                      pressed: {
-                        fill: "#FF5722",
-                        stroke: "#607D8B",
-                        strokeWidth: 0.75,
-                        outline: "none",
-                      },
-                    }}
+                    style={SUPPORTED.hasOwnProperty(geography.id)?SUPPORTED_STYLE:NOSUPPORT_STYLE}
                   ></Geography>
                 ))}
               </Geographies>
