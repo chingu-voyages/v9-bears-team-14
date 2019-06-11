@@ -1,5 +1,6 @@
 import React, { Component } from "react"
-import JSONmap from './static/world-countries.json';
+import axios from 'axios';      //axios is a http promise client tool
+import JSONmap from '../static/world-countries.json';
 import "./Map.css";
 import {
   ComposableMap,
@@ -8,49 +9,50 @@ import {
   Geography,
 } from "react-simple-maps"
 
-/**This is a hard coded map for what countries the themealapi supports */
+/**This is a hard coded map for what countries "the meal api" supports */
 const SUPPORTED={
-  "USA": "American",
-  "GBR": "British",
-  "CAN": "Canadian",
-  "CHN": "Chinese",
-  "NLD":"Dutch",
-  "EGY":"Egyptian",
-  "FRA":"French",
-  "GRC":"Greek",
-  "IND":"Indian",
-  "IRL":"Irish",
-  "ITA":"Italian",
-  "JAM":"Jamaican",
-  "JPN":"Japanese",
-  "KEN":"Kenyan",
-  "MYS":"Malaysian",
-  "MEX":"Mexican",
-  "MAR":"Moroccan",
-  "RUS":"Russian",
-  "ESP":"Spanish",
-  "THA":"Thai",
-  "VNM":"Vietnamese"
+  "United States of America": "American",
+  "United Kingdom": "British",
+  "Canada": "Canadian",
+  "China": "Chinese",
+  "Netherlands":"Dutch",
+  "Egypt":"Egyptian",
+  "France":"French",
+  "Greece":"Greek",
+  "India":"Indian",
+  "Ireland":"Irish",
+  "Italy":"Italian",
+  "Jamaica":"Jamaican",
+  "Japan":"Japanese",
+  "Kenya":"Kenyan",
+  "Malaysia":"Malaysian",
+  "Mexico":"Mexican",
+  "Moroco":"Moroccan",
+  "Russia":"Russian",
+  "Spain":"Spanish",
+  "Thailand":"Thai",
+  "Vietnam":"Vietnamese"
 }
 
 const SUPPORTED_STYLE={
   default: {
     fill: "#32CD32",
     stroke: "#607D8B",
-    strokeWidth: 0.75,
+    strokeWidth: 1,
     outline: "none"
   },
   hover: {
     fill: "#FF5722",
     stroke: "#607D8B",
     strokeWidth: 0.75,
-    outline: "none",
+    outline: "none"
   },
   pressed: {
     fill: "#FF5722",
     stroke: "#607D8B",
     strokeWidth: 0.75,
     outline: "none",
+    boxShadow:"0 0 10px #fff"
   },
 }
 
@@ -72,6 +74,7 @@ const NOSUPPORT_STYLE={
     stroke: "#607D8B",
     strokeWidth: 0.75,
     outline: "none",
+    boxShadow:"0 0 10px #fff"
   },
 }
   class Map extends Component {
@@ -79,14 +82,29 @@ const NOSUPPORT_STYLE={
     constructor(props){
       super(props);
       this.state={
-        selected:null
+        selected:null,
+        loading:false
       }
-      this.setCountryName.bind(this);
+      
     }
   
-    setCountryName(name){
+    getCountryRecipes = async (name)=>{
       console.log(name)
-      this.setState({selected:name})
+      if(SUPPORTED.hasOwnProperty(name)){     
+        this.setState({selected:name})
+        try{
+          const response = await axios.get(`/api/countries/${SUPPORTED[name]}`);
+          console.log('from the backend: ',response);
+        }
+        catch(error){
+          console.log(error);
+        }
+      }
+      else{
+        return;
+      }
+
+
     }
   
     render() {
@@ -112,8 +130,8 @@ const NOSUPPORT_STYLE={
                     key={i}
                     geography={geography}
                     projection={projection}
-                    onClick={()=>this.setCountryName(geography.properties.name)}
-                    style={SUPPORTED.hasOwnProperty(geography.id)?SUPPORTED_STYLE:NOSUPPORT_STYLE}
+                    onClick={()=>this.getCountryRecipes(geography.properties.name)}
+                    style={SUPPORTED.hasOwnProperty(geography.properties.name)?SUPPORTED_STYLE:NOSUPPORT_STYLE}
                   ></Geography>
                 ))}
               </Geographies>
