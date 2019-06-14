@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import JSONmap from './static/world-countries.json';
+import JSONmap from '../../static/world-countries.json';
 import "./Map.css";
 import {
   ComposableMap,
