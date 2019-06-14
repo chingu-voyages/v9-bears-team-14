@@ -1,6 +1,6 @@
 import React from 'react';
-import Map from './Map';
-import Header from './Header';
+import Map from './components/Map/Map';
+import Header from './components/Header/Header';
 
 
 function App() {
