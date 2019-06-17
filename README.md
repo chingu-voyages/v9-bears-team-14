@@ -1,8 +1,18 @@
 
-# v9-bears-team-14
+# GEO FOODS
+
+Geo Foods: an exploration of the world's cuisines | Voyage-9 | https://chingu.io/
+
+# Description
+
+Geo Foods is a simple to use application which enables the user to click on a marked map to receive information about that part of the world's recipes.
+
+# Voyage 9 Bears Team 14
 
 # Team Members
-Regina McGuire
+
+Regina McGuire 
+
 Brian Trang
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
