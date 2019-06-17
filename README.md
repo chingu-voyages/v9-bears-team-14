@@ -3,14 +3,16 @@
 
 Geo Foods: an exploration of the world's cuisines | Voyage-9 | https://chingu.io/
 
-#Description
+# Description
 
 Geo Foods is a simple to use application which enables the user to click on an a marked map to receive information about that part of the world's recipes.
 
-# v9-bears-team-14
+# Voyage 9 Bears Team 14
 
 # Team Members
-Regina McGuire
+
+Regina McGuire 
+
 Brian Trang
 
 
