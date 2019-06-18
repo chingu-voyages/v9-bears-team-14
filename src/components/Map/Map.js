@@ -83,14 +83,43 @@ const NOSUPPORT_STYLE={
     constructor(props){
       super(props);
       this.state={
-        selected:null
+        selected:null,
+        loading:false,
+        recipes:[]
       }
-      this.setCountryName.bind(this);
     }
   
-    setCountryName(name){
+/**
+     * @function - isCountrySupported - this function checks if country selected is supported by themealdb api.
+     * @param {string} - name - name of country clicked
+     * @return {boolean} - true if country is supported by api, false if not supported by api
+     */
+    isCountrySupported =(name)=>{
+      return SUPPORTED.hasOwnProperty(name);
+    }
+
+    /**
+     * @function - getCountryRecipes - this async function sets the country selected based on user's click and performs an async GET request to retrieve selected country's recipes
+     * @param {string} - name - name of country clicked
+     */
+    getCountryRecipes = async (name)=>{
       console.log(name)
       this.setState({selected:name})
+      if(this.isCountrySupported(name)){     
+        this.setState({selected:name})
+        try{
+          const response = await axios.get(`/api/countries/${SUPPORTED[name]}`);
+          console.log('from the backend: ',response);
+          this.setState({recipes:response.data})
+
+        }
+        catch(error){
+          console.log(error);
+        }
+      }
+      else{
+        return;
+      }
     }
   
     render() {
@@ -116,27 +145,8 @@ const NOSUPPORT_STYLE={
                     key={i}
                     geography={geography}
                     projection={projection}
-                    onClick={()=>this.setCountryName(geography.properties.name)}
-                    style={{
-                      default: {
-                        fill: "#ECEFF1",
-                        stroke: "#607D8B",
-                        strokeWidth: 0.75,
-                        outline: "none"
-                      },
-                      hover: {
-                        fill: "#607D8B",
-                        stroke: "#607D8B",
-                        strokeWidth: 0.75,
-                        outline: "none",
-                      },
-                      pressed: {
-                        fill: "#FF5722",
-                        stroke: "#607D8B",
-                        strokeWidth: 0.75,
-                        outline: "none",
-                      },
-                    }}
+                    onClick={()=>this.getCountryRecipes(geography.properties.name)}
+                    style={SUPPORTED.hasOwnProperty(geography.properties.name)?SUPPORTED_STYLE:NOSUPPORT_STYLE}
                   ></Geography>
                 ))}
               </Geographies>
