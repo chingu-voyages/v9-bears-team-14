@@ -23,7 +23,7 @@
         "Vietnam":"Vietnamese"
     },
     styles:{
-        supported:{
+        supportedStyled:{
             default: {
                 fill: "#32CD32",
                 stroke: "#607D8B",
@@ -44,7 +44,7 @@
                 boxShadow:"0 0 10px #fff"
               }
         },
-        notSupported:{
+        notSupportedStyled:{
             default: {
                 fill: "#ECEFF1",        // any country that is NOT-supported will shaded gray
                 stroke: "#607D8B",
@@ -66,11 +66,27 @@
               }
         },
       selectedStyled:{
-        fill: "#FF5722",
-        stroke: "#607D8B",
-        strokeWidth: 0.75,
-        outline: "none",
-        boxShadow:"0 0 10px #fff"
+        default:{
+          fill: "#FF5722",
+          stroke: "#607D8B",
+          strokeWidth: 0.75,
+          outline: "none",
+          boxShadow:"0 0 10px #fff"
+        },
+        hover: {
+          fill: "#FF5722",
+          stroke: "#607D8B",
+          strokeWidth: 0.75,
+          outline: "none",
+          boxShadow:"0 0 10px #fff"
+        },
+        pressed: {
+          fill: "#FF5722",
+          stroke: "#607D8B",
+          strokeWidth: 0.75,
+          outline: "none",
+          boxShadow:"0 0 10px #fff"
+        }
       }
     }
 }
