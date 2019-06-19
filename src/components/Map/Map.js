@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import ReactTooltip from "react-tooltip"
 import JSONmap from '../../static/world-countries.json';
 import axios from 'axios';      //axios is a http promise client tool
 import "./Map.css";
@@ -145,13 +146,15 @@ const NOSUPPORT_STYLE={
                     key={i}
                     geography={geography}
                     projection={projection}
+                    data-tip={geography.properties.name}
                     onClick={()=>this.getCountryRecipes(geography.properties.name)}
                     style={SUPPORTED.hasOwnProperty(geography.properties.name)?SUPPORTED_STYLE:NOSUPPORT_STYLE}
                   ></Geography>
                 ))}
-              </Geographies>
+              </Geographies>  
             </ZoomableGroup>
           </ComposableMap>
+          <ReactTooltip />
         </div>
       )
     }
