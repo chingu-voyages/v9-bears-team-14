@@ -9,6 +9,7 @@ const Results = (props) =>
                 {meals.map((meal) => 
                     <div className="Results__Card">
                     <h1  key={meal.idMeal}>{meal.menuTitle}</h1>
+                    <img className="Results__Image"src={meal.menuTitleThumb} alt={meal.menuTitle}/>
                 </div>
                 )} 
             </div> 

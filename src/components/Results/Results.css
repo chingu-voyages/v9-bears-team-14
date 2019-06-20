@@ -6,7 +6,9 @@
     padding: 2em;
     width: 25%; 
 }
-
+.Results__Image {
+    width: 7em;
+}
 .Results__Title{
     font-family:sans-serif;
     font-size:4rem;
