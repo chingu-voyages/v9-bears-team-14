@@ -2,7 +2,7 @@ import React, {  useState } from "react"
 import ReactTooltip from "react-tooltip"
 import JSONmap from '../../static/world-countries.json';
 import MAP_CONSTANTS from './MapConstants/MAP_CONSTANTS';
-
+import useRecipes from '../../hooks/useRecipes';
 import "./Map.css";
 import {
   ComposableMap,
@@ -18,6 +18,7 @@ const Map =()=>{
   const {supportedCountries} = MAP_CONSTANTS;
   const {supportedStyled,notSupportedStyled,selectedStyled}= MAP_CONSTANTS.styles;
 
+  useRecipes(countrySelected);
 
   const getStyles =(countryName)=>{
     if(supportedCountries.hasOwnProperty(countryName) && countryName===countrySelected){

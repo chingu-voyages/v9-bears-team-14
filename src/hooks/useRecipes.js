@@ -9,13 +9,18 @@ import axios from 'axios';
  */
 const useRecipes= (country)=>{
     const [recipes,setRecipes]= useState([]);
-    const {supportedCountries}= MAP_CONSTANTS;
+   
     
     useEffect(
          ()=>{
-            ( async country =>{       
-                const response = await axios.get(`/api/countries/${supportedCountries[country]}`);
-                setRecipes(response.data);
+            const {supportedCountries}= MAP_CONSTANTS;          //Need to move into useEffect function to avoid ESLINT error https://reactjs.org/docs/hooks-faq.html#is-it-safe-to-omit-functions-from-the-list-of-dependencies
+            ( async country =>{
+                if(supportedCountries.hasOwnProperty(country)){
+                    const response = await axios.get(`/api/countries/${supportedCountries[country]}`);
+                    setRecipes(response.data);
+                    console.log(response.data);
+                }       
+                return;
             })(country);
         },
         [country]      //empty [] means it works like componentDidMount
