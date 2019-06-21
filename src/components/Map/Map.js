@@ -18,7 +18,7 @@ const Map =()=>{
   const {supportedCountries} = MAP_CONSTANTS;
   const {supportedStyled,notSupportedStyled,selectedStyled}= MAP_CONSTANTS.styles;
 
-  useRecipes(countrySelected);
+  console.log(useRecipes(countrySelected));
 
   const getStyles =(countryName)=>{
     if(supportedCountries.hasOwnProperty(countryName) && countryName===countrySelected){

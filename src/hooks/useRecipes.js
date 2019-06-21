@@ -18,7 +18,6 @@ const useRecipes= (country)=>{
                 if(supportedCountries.hasOwnProperty(country)){
                     const response = await axios.get(`/api/countries/${supportedCountries[country]}`);
                     setRecipes(response.data);
-                    console.log(response.data);
                 }       
                 return;
             })(country);
