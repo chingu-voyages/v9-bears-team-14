@@ -3,7 +3,6 @@ import ReactTooltip from "react-tooltip"
 import JSONmap from '../../static/world-countries.json';
 import MAP_CONSTANTS from './MapConstants/MAP_CONSTANTS';
 import CountryContext from '../../context/country-context'
-import useRecipes from '../../hooks/useRecipes';
 import "./Map.css";
 import {
   ComposableMap,
@@ -15,13 +14,9 @@ import {
 
 const Map =()=>{
   const {countrySelected, setSelectedCountry} = useContext(CountryContext)
-  
-
   const {supportedCountries} = MAP_CONSTANTS;
   const {supportedStyled,notSupportedStyled,selectedStyled}= MAP_CONSTANTS.styles;
 
-  console.log(useRecipes(countrySelected));
-  
   const getStyles =(countryName)=>{
     if(supportedCountries.hasOwnProperty(countryName) && countryName===countrySelected){
       return selectedStyled

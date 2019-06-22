@@ -11,7 +11,7 @@ function App() {
       <CountryContext.Provider value={ {countrySelected, setSelectedCountry}} className="App">
           <Header/>
           <Map />
-          <Results countryName={countrySelected}/>
+          <Results />
       </CountryContext.Provider>
   );
 }
