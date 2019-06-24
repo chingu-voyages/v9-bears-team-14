@@ -8,10 +8,12 @@ import CountryContext from './context/country-context'
 function App() {
   const [countrySelected, setSelectedCountry] = useState('')
   return (
-      <CountryContext.Provider value={ {countrySelected, setSelectedCountry}} className="App">
+      <CountryContext.Provider value={ {countrySelected, setSelectedCountry}} >
+        <div className="App">
           <Header/>
           <Map />
           <Results />
+        </div>
       </CountryContext.Provider>
   );
 }
