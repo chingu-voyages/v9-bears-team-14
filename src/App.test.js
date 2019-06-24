@@ -7,24 +7,42 @@ import Map from './components/Map/Map';
 import Results from './components/Results/Results';
 Enzyme.configure({adapter:new EnzymeAdapter()});
 
-test('renders App without Error',()=>{
-  const wrapper = mount(<App/>);
+/**
+ * 
+ * @param {*} props - props of main component
+ * @param {*} state - state of main component
+ */
+const setUp = (props={},state=null)=>{
+  return mount(<App {...props}/>)
+}
 
-  expect(wrapper.find(App).length).toBe(1);
+/**
+ * 
+ * @param {*} wrapper - wrapper for the main component we are testing
+ * @param {*} comp - child component we are testing
+ * @return {number} - total number of the child component foun d
+ */
+const findComponentLength =(wrapper,comp)=>{
+   const found = wrapper.find(comp);
+   return found.length;
+}
+
+test('renders App without Error',()=>{
+  const  wrapper = setUp();
+  expect(wrapper.exists()).toBeTruthy();
 });
 
 test('it has a Header component',()=>{
-  const wrapper = mount(<App/>);
-  const header = wrapper.find(Header);
-  expect(header.length).toBe(1);
+  const  wrapper = setUp();
+  expect(findComponentLength(wrapper,Header)).toBe(1);
 });
 
 test('it has a  Map component',()=>{
-  const wrapper = mount(<App/>);
-  expect(wrapper.find(Map).length).toBe(1);
+  const  wrapper = setUp();
+  expect(findComponentLength(wrapper,Map)).toBe(1);
 });
 
 test('it has a Results component',()=>{
-  const wrapper = mount(<App/>);
-  expect(wrapper.find(Results).length).toBe(1);
+  const  wrapper = setUp();
+  expect(findComponentLength(wrapper,Results)).toBe(1);
 });
