@@ -1,7 +1,8 @@
 import React from 'react';
 import Enzyme,{ shallow} from 'enzyme';
-import Header from './Header';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
+import Header from './Header';
+
 
 Enzyme.configure({adapter:new EnzymeAdapter()});
 /* Test user observable behaviour */
