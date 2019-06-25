@@ -16,7 +16,7 @@
         "Kenya":"Kenyan",
         "Malaysia":"Malaysian",
         "Mexico":"Mexican",
-        "Moroco":"Moroccan",
+        "Morocco":"Moroccan",
         "Russia":"Russian",
         "Spain":"Spanish",
         "Thailand":"Thai",
@@ -25,7 +25,7 @@
     styles:{
         supportedStyled:{
             default: {
-                fill: "#32CD32",
+                fill: "#32CD32",                  //shade of green
                 stroke: "#607D8B",
                 strokeWidth: 1,
                 outline: "none"
