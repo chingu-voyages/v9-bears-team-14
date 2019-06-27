@@ -1,8 +1,6 @@
 const axios = require('axios');     //http client
 module.exports=app=>{
-    app.get('/',(req,res)=>{
-        res.send({hi:'there from Geo-foods'})
-    })
+
     
     /**
      * @function - this is a route that handles GET requests for a country's recipes, takes in a country name params
