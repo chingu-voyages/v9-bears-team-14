@@ -18,14 +18,27 @@ const Map =()=>{
   const {supportedStyled,notSupportedStyled,selectedStyled}= MAP_CONSTANTS.styles;
 
   const getStyles =(countryName)=>{
-    if(supportedCountries.hasOwnProperty(countryName) && countryName===countrySelected){
+    if(isValidCountry(countryName) && countryName===countrySelected){
       return selectedStyled
     }
-    else if(supportedCountries.hasOwnProperty(countryName)){
+    else if(isValidCountry(countryName)){
       return supportedStyled
     }
     else 
       return notSupportedStyled;
+  }
+
+  const isValidCountry=(country)=>{
+    return supportedCountries.hasOwnProperty(country);
+  }
+
+  const clickHandler=(country)=>{
+    if(isValidCountry(country)){
+      setSelectedCountry(country)
+    }
+    else{
+      return;
+    }
   }
 
   return (
@@ -46,12 +59,12 @@ const Map =()=>{
           <Geographies geography={JSONmap} disableOptimization={true}>
             {(geographies, projection) => geographies.map((geography, i) => geography.id !== "ATA" && (
               <Geography
-                name={geography.properties.name}
+                name={isValidCountry(geography.properties.name)?geography.properties.name:"NOT SUPPORTED"}
                 key={i}
                 geography={geography}
                 projection={projection}
-                data-tip={geography.properties.name}
-                onClick={()=>setSelectedCountry(geography.properties.name)}
+                data-tip={isValidCountry(geography.properties.name)?geography.properties.name:"NOT SUPPORTED"}
+                onClick={()=>clickHandler(geography.properties.name)}
                 style={getStyles(geography.properties.name)}
               ></Geography>
             ))}
