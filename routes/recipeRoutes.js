@@ -9,10 +9,10 @@ module.exports=app=>{
     app.get("/api/countries/:country", async (req,res)=>{
         console.log(req.params.country)
         try{
-          const recipes= await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${req.params.country}`)
-          console.log(recipes.data.meals);
+          //const recipes= await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${req.params.country}`)
+          //console.log(recipes.data.meals);
     
-          res.send(recipes.data.meals);
+          res.send("unused route currently");
         }
         catch(error){
             console.log(error);
