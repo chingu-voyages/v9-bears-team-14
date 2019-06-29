@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
-import "./Results.css";
 import useRecipes from "../../hooks/useRecipes";
 import CountryContext from "../../context/country-context";
 import MAP_CONSTANTS from "../Map/MapConstants/MAP_CONSTANTS";
+import LoadSpinner from '../LoadingModal/LoadSpinner';
+import "./Results.css";
+
 
 const Results = () => {
   const { countrySelected } = useContext(CountryContext);
@@ -26,7 +28,7 @@ const Results = () => {
 return (
             <div className="Results__Container">
                 {isError && <div>Something went wrong ...</div>}
-                {isLoading? "Loading": recipes.length?renderRecipes():null}
+                {isLoading? <LoadSpinner/> : recipes.length?renderRecipes():null}
             </div>
     )
 };

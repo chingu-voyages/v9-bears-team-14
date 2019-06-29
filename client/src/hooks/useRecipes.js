@@ -12,21 +12,7 @@ const useRecipes= (country)=>{
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
     
-    // useEffect(
-    //      ()=>{
-    //         const {supportedCountries}= MAP_CONSTANTS;          //Need to move into useEffect function to avoid ESLINT error https://reactjs.org/docs/hooks-faq.html#is-it-safe-to-omit-functions-from-the-list-of-dependencies
-    //         ( async country =>{
-    //             if(supportedCountries.hasOwnProperty(country)){
-    //                 const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${supportedCountries[country]}`);
-    //                 if(response.data.meals){
-    //                     setRecipes(response.data.meals);
-    //                 }
-    //             }       
-    //             return;
-    //         })(country);
-    //     },
-    //     [country]      //empty [] means it works like componentDidMount
-    // );
+
     useEffect(
         ()=>{
            const {supportedCountries}= MAP_CONSTANTS;          //Need to move into useEffect function to avoid ESLINT error https://reactjs.org/docs/hooks-faq.html#is-it-safe-to-omit-functions-from-the-list-of-dependencies 

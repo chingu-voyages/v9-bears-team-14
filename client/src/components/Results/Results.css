@@ -14,7 +14,7 @@
     font-size:4rem;
     letter-spacing: .3 em;
     text-align: center;
-    text-shadow: 1px 1px 3px #000;
+    text-shadow: 0px 1px 3px #000;
 }
 .Results__Wrapper {
     background-color: #dfe1e6;
