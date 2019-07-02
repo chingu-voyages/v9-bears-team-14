@@ -1,73 +1,43 @@
-// .Results--card {
-//     // background-color: #ff5722;
-//     border-radius: 3px;
-//     // box-shadow: 0 3px 5px rgba(0,0, 0, 0.6);
-//     color: #5d0000;
-//     // margin: 2rem;
-//     margin: calc(2px + 1vmin);
-//     // padding: 1rem;
-//     // padding: calc(5px + 1vmin);
-//     width: 25%; 
-// }
-// .Results--image {
-//     width: 116px;
-// }
+
 .Results--title{
     color: #910000;
-    font-size:4rem;
-    letter-spacing: .3 rem;
+    letter-spacing: .3rem;
     text-align: center;
     text-shadow: 1px 1px 3px #000;
 }
 
-@media (min-width: 800px) and (max-width: 1440px) {
-    .Results--title {
-      font-size: calc( 3.5rem + 16 * (100vw - 800px) / (1440 - 800) );
-      /* For a negative slope, we have to invert the breakpoints */
-      line-height: calc( 120% + 4.2 * (100vw - 1440px) / (800 - 1400) );
-    }
-    .Results--card--title{
-        font-size: calc( 1.5rem + 16 * (100vw - 800px) / (1440 - 800) );
-        /* For a negative slope, we have to invert the breakpoints */
-        line-height: calc( 120% + 4.2 * (100vw - 1440px) / (800 - 1400) );
-    }
-  }
 
 
-/*MOBILE*/
-  @media (min-width: 320px) and (max-width: 500px) {
-    .Results--title {
-      font-size: calc( 2.5rem + 16 * (100vw - 320px) / (500 - 320) );
-      /* For a negative slope, we have to invert the breakpoints */
-      line-height: calc( 120% + 3.2 * (100vw - 500px) / (320 - 500) );
-    }
-    .Results--card--title{
-        font-size: calc( 1.5rem + 16 * (100vw - 800px) / (1440 - 800) );
-        /* For a negative slope, we have to invert the breakpoints */
-        line-height: calc( 120% + 4.2 * (100vw - 1440px) / (800 - 1400) );
-    }
-  }
+
+
+
+
 .Results--wrapper {
-    // background-color: #ffebe6;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto;
     max-width: 980px;
     width: 100%;
 }
 
-.Results--container{
-    margin:calc(5px + 3vmin);
-}
-
-
 
 /*Macbook-air 2018 (1024px)*/
 @media (min-width:1024px){
+
+    .Results--container{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        margin:calc(5px + 5vmin);
+    }
+
+    .Results--title{
+        color: #910000;
+        letter-spacing: .3rem;
+        text-align: center;
+        text-shadow: 1px 1px 3px #000;
+        padding:calc(3px + 3vmin);
+    }
+    
     .Results--card {
         position:relative;
-        /* width: 25%;  */
     }
 
     .Results--card .after {
@@ -89,6 +59,7 @@
     .Results--card--title{
         position:relative;
         top:70%;
+        text-align: center;
     }
     .Results--image {
         width:100%;
@@ -97,19 +68,18 @@
     }
     .Results--title{
         font-family: "Source Sans Pro",sans-serif;
-        font-size:6rem;
         letter-spacing: .3em;
         text-align: center;
         text-transform: uppercase;
         font-weight: 300;
-        padding:3rem;
+        // padding:3rem;
     }
 
     .Results--wrapper {
         display: grid;
         grid-gap: 20px;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        margin:3rem;
+        justify-items: center;
       }
     
     .Title--heading{
@@ -120,10 +90,25 @@
 /*iphone-x (375px) */
 @media (max-width:500px){
 
+    .Results--container{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .Results--title{
+        color: #910000;
+        letter-spacing: .3rem;
+        text-align: center;
+        text-shadow: 1px 1px 3px #000;
+        padding:calc(3px + 3vmin);
+    }
+
     .Results--wrapper {
         display: grid;
         grid-gap: 20px;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        justify-items: center;
       }
 
     .Results--title{
@@ -135,7 +120,6 @@
     }
 
     .Results--card {
-        /* background-color: #7fcdff; */
         position:relative;
         border-radius: 3px;
     }
@@ -158,10 +142,32 @@
     }
 }
 
-@media (min-width: 1024px) and (max-width: 2000px) {
-    .Results--card--title{
-      font-size: calc( .8rem + 16 * (100vw - 1024px) / (2000 - 1024) );
+
+  
+
+  @media (min-width: 800px) and (max-width: 1440px) {
+    .Results--title {
+      font-size: calc( 3.5rem + 16 * (100vw - 800px) / (1440 - 800) );
       /* For a negative slope, we have to invert the breakpoints */
-      line-height: calc( 120% + 3.2 * (100vw - 2000px) / (1024 - 2000) );
+      line-height: calc( 120% + 4.2 * (100vw - 1440px) / (800 - 1400) );
+    }
+    .Results--card--title{
+        font-size: calc( .8rem + 16 * (100vw - 800px) / (1440 - 800) );
+        /* For a negative slope, we have to invert the breakpoints */
+        line-height: calc( 120% + 4.2 * (100vw - 1440px) / (800 - 1400) );
+    }
+  }
+
+  /*MOBILE*/
+  @media (min-width: 320px) and (max-width: 500px) {
+    .Results--title {
+      font-size: calc( 2.5rem + 16 * (100vw - 320px) / (500 - 320) );
+      /* For a negative slope, we have to invert the breakpoints */
+      line-height: calc( 120% + 3.2 * (100vw - 500px) / (320 - 500) );
+    }
+    .Results--card--title{
+        font-size: calc( 1.5rem + 16 * (100vw - 800px) / (1440 - 800) );
+        /* For a negative slope, we have to invert the breakpoints */
+        line-height: calc( 120% + 4.2 * (100vw - 1440px) / (800 - 1400) );
     }
   }
