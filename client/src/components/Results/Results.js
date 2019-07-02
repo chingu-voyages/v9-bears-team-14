@@ -27,7 +27,7 @@ const Results = () => {
 
 return (
             <div className="Results--wrapper">
-                {isError && <div>Something went wrong ...</div>}
+                {isError && <div className="Results--error">Something went wrong ...</div>}
                 {isLoading? <LoadSpinner/> : recipes.length?renderRecipes():null}
             </div>
     )

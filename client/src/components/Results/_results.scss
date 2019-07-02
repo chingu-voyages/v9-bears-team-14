@@ -25,4 +25,13 @@
     margin: 0 auto;
     max-width: 980px;
     width: 100%;
+    margin-top: calc(10px + 3vmin);
+}
+
+.Results--error{
+    font-size:4rem;
+    letter-spacing: .3rem;
+    text-align: center;
+    text-shadow: 1px 1px 3px #000;
+    padding:calc(10px + 3vmin);
 }
