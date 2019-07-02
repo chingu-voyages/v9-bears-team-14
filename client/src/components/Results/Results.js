@@ -15,9 +15,9 @@ const Results = () => {
                     <h1 className="Results--title">{MAP_CONSTANTS.supportedCountries[countrySelected]} Recipes</h1>         
                     <div className="Results--wrapper">
                         {recipes.map((meal) => 
-                            <div key={meal.idMeal} className="Results__Card">
+                            <div key={meal.idMeal} className="Results--card">
                                 <h1  >{meal.strMeal}</h1>
-                                <img className="Results__Image"src={meal.strMealThumb} alt={meal.strMeal}/>
+                                <img className="Results--image"src={meal.strMealThumb} alt={meal.strMeal}/>
                             </div>
                         )} 
                     </div>
