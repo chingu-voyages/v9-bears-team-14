@@ -15,7 +15,6 @@ describe("Map",()=>{
             .spyOn(CountryContext,'useCountryContext')      //we use jest spy to mock our provider
             .mockImplementation(()=> contextValues);
         const wrapper = shallow(<Map/>);
-          
         const div = wrapper.find('div');
         expect(div.hasClass("Map__Wrapper")).toBe(true);
     })
@@ -33,12 +32,10 @@ describe("Map",()=>{
         const TOTAL_SUPPORTED = Object.keys(MAP_CONSTANTS.supportedCountries).length;
         const wrapper = mount(<Map />);
         const found =wrapper.find(Geographies);
-        //console.log(found.length);
-         const countries = found.find(Geography);
+        const countries = found.find(Geography);
 
         let count =0;
         for(let i=0;i<countries.length;i++){
-            //console.log(countries.get(i));
             if(countries.get(i).props.style.default.fill==="#32CD32"){
                 count++;
             }
