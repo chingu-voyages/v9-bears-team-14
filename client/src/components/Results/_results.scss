@@ -1,14 +1,16 @@
 .Results--card {
-    background-color: #ff5722;
+    // background-color: #ff5722;
     border-radius: 3px;
-    box-shadow: 0 3px 5px rgba(0,0, 0, 0.6);
+    // box-shadow: 0 3px 5px rgba(0,0, 0, 0.6);
     color: #5d0000;
-    margin: 2rem;
-    padding: 1rem;
+    // margin: 2rem;
+    margin: calc(2px + 1vmin);
+    // padding: 1rem;
+    // padding: calc(5px + 1vmin);
     width: 25%; 
 }
 .Results--image {
-    width: 7rem;
+    width: 116px;
 }
 .Results--title{
     color: #910000;
@@ -17,12 +19,44 @@
     text-align: center;
     text-shadow: 1px 1px 3px #000;
 }
+
+@media (min-width: 800px) and (max-width: 1440px) {
+    .Results--title {
+      font-size: calc( 3.5rem + 16 * (100vw - 800px) / (1440 - 800) );
+      /* For a negative slope, we have to invert the breakpoints */
+      line-height: calc( 120% + 4.2 * (100vw - 1440px) / (800 - 1400) );
+    }
+    .Results--card--title{
+        font-size: calc( 1.5rem + 16 * (100vw - 800px) / (1440 - 800) );
+        /* For a negative slope, we have to invert the breakpoints */
+        line-height: calc( 120% + 4.2 * (100vw - 1440px) / (800 - 1400) );
+    }
+  }
+
+
+/*MOBILE*/
+  @media (min-width: 320px) and (max-width: 500px) {
+    .Results--title {
+      font-size: calc( 2.5rem + 16 * (100vw - 320px) / (500 - 320) );
+      /* For a negative slope, we have to invert the breakpoints */
+      line-height: calc( 120% + 3.2 * (100vw - 500px) / (320 - 500) );
+    }
+    .Results--card--title{
+        font-size: calc( 1.5rem + 16 * (100vw - 800px) / (1440 - 800) );
+        /* For a negative slope, we have to invert the breakpoints */
+        line-height: calc( 120% + 4.2 * (100vw - 1440px) / (800 - 1400) );
+    }
+  }
 .Results--wrapper {
-    background-color: #ffebe6;
+    // background-color: #ffebe6;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
     max-width: 980px;
     width: 100%;
+}
+
+.Results--container{
+    margin:calc(5px + 3vmin);
 }

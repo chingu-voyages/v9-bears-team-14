@@ -2,21 +2,40 @@
     background: #ff5722;
     border-radius: 3px;
     box-shadow: 0 0 10px #4d0000;
-    padding: 1 rem;
+    margin-bottom: calc(5px + 5vmin);
     text-align:left;
+    padding: calc(1px + 1vmin);
+    
 }
 
 .Header--title{
     color: #910000;
-    font-size: 6rem;
-    letter-spacing: .6rem;
-    margin: 1rem 0 0 0;
-    padding: 0 0 0 5rem;
+    letter-spacing: .9rem;
+    margin: calc(2px + 1vmin);
+    padding-left: calc(5px + 5vmin);
     text-shadow: 1px 1px 3px #000;
 }
+/*Screens*/
+@media (min-width: 800px) and (max-width: 1440px) {
+    .Header--title {
+      font-size: calc( 3.5rem + 16 * (100vw - 800px) / (1440 - 800) );
+      /* For a negative slope, we have to invert the breakpoints */
+      line-height: calc( 120% + 4.2 * (100vw - 1440px) / (800 - 1400) );
+    }
+  }
+
+
+/*MOBILE*/
+  @media (min-width: 320px) and (max-width: 500px) {
+    .Header--title {
+      font-size: calc( 2.5rem + 16 * (100vw - 320px) / (500 - 320) );
+      /* For a negative slope, we have to invert the breakpoints */
+      line-height: calc( 120% + 3.2 * (100vw - 500px) / (320 - 500) );
+    }
+  }
 .Header--subtitle{
     font-size: 3rem;
-    margin: 0 0 1rem 0;
-    padding: 0 5rem .5rem 0;
+    // margin-bottom: calc(1px + 1vmin);
+     padding-right: calc(2px + 1vmin);
     text-align: right;
 }
