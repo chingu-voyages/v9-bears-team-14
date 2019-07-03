@@ -25,17 +25,10 @@
         display: grid;
         grid-template-columns: 1fr;
         justify-items: center;
-        margin:calc(5px + 5vmin);
+        margin:calc(3px + 3vmin);
     }
 
-    .Results--title{
-        color: #910000;
-        letter-spacing: .3rem;
-        text-align: center;
-        text-shadow: 1px 1px 3px #000;
-        padding:calc(3px + 3vmin);
-    }
-    
+
     .Results--card {
         position:relative;
     }
@@ -67,13 +60,18 @@
         filter: drop-shadow(0px 3px 9px rgba(0,0,0,0.6));
     }
     .Results--title{
-        font-family: "Source Sans Pro",sans-serif;
-        letter-spacing: .3em;
+        // font-family: "Source Sans Pro",sans-serif;
+        letter-spacing: .6rem;
         text-align: center;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         font-weight: 300;
         // padding:3rem;
+        padding:calc(5px + 5vmin);
+        text-shadow: 1px 1px 3px #000;
+        color: #910000;
+
     }
+
 
     .Results--wrapper {
         display: grid;
