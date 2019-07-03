@@ -115,20 +115,21 @@
         left: 0;
         width: 100%;
         height: 100%;
-        display: none;
         color: #FFF;
         padding: calc(5px + 3vmin);
     }
-
-    .Results--card:hover .after {
-        display: block;
-        background: rgba(0, 0, 0, .6);
-    }
+    /*HOVER EFFECTS DOESN'T WORK ON MOBILE*/
+    // .Results--card:hover .after {
+    //     display: block;
+    //     background: rgba(0, 0, 0, .6);
+    // }
 
     .Results--card--title{
         position:relative;
         top:70%;
         text-align: center;
+        color: #FFF;
+        letter-spacing: .3rem;
     }
 
     .Results--image {
@@ -162,8 +163,8 @@
       line-height: calc( 120% + 3.2 * (100vw - 500px) / (320 - 500) );
     }
     .Results--card--title{
-        font-size: calc( 1.5rem + 16 * (100vw - 800px) / (1440 - 800) );
+        font-size: calc( 2rem + 16 * (100vw - 320px) / (500 - 320) );
         /* For a negative slope, we have to invert the breakpoints */
-        line-height: calc( 120% + 4.2 * (100vw - 1440px) / (800 - 1400) );
+        line-height: calc( 120% + 4.2 * (100vw - 500px) / (320 - 500) );
     }
   }
