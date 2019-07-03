@@ -3,6 +3,7 @@ import useRecipes from "../../hooks/useRecipes";
 import CountryContext from "../../context/country-context";
 import MAP_CONSTANTS from "../Map/MapConstants/MAP_CONSTANTS";
 import LoadSpinner from '../LoadingModal/LoadSpinner';
+import Recipe from '../Recipe/Recipe'
 import "./_results.scss";
 
 const Results = (props) => {
@@ -23,7 +24,9 @@ const Results = (props) => {
                                 </div>
                             )} 
                         </div>
+                        <Recipe />
                     </React.Fragment>
+                    
                 );
     }
 return (
