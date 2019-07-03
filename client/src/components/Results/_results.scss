@@ -6,12 +6,6 @@
     text-shadow: 1px 1px 3px #000;
 }
 
-
-
-
-
-
-
 .Results--wrapper {
     max-width: 980px;
     width: 100%;
@@ -60,16 +54,11 @@
         filter: drop-shadow(0px 3px 9px rgba(0,0,0,0.6));
     }
     .Results--title{
-        // font-family: "Source Sans Pro",sans-serif;
         letter-spacing: .6rem;
         text-align: center;
-        // text-transform: uppercase;
-        font-weight: 300;
-        // padding:3rem;
         padding:calc(5px + 5vmin);
         text-shadow: 1px 1px 3px #000;
         color: #910000;
-
     }
 
 
@@ -104,17 +93,14 @@
 
     .Results--wrapper {
         display: grid;
-        grid-gap: 20px;
+        grid-gap: 10px;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         justify-items: center;
       }
 
     .Results--title{
-        font-family: "Source Sans Pro",sans-serif;
-        font-size:4rem;
         text-align: center;
-        text-transform: uppercase;
-        padding:3rem;
+        padding:calc(1px + 3vmin);
     }
 
     .Results--card {
@@ -122,20 +108,25 @@
         border-radius: 3px;
     }
 
-    .Title__Wrapper{
-        padding:1.2rem;
+    .Results--card:hover .after {
+        display: block;
+        background: rgba(0, 0, 0, .6);
     }
 
-    .Title--heading{
-        font-size:3rem;
+    .Title__Wrapper{
+        padding:calc(1px + 3vmin);
+    }
+
+    .Results--card--title{
+        position:relative;
+        top:70%;
         text-align: center;
     }
 
 
     .Results--image {
-        width:50px;
         border-radius:5px; 
-        object-fit: cover;
+        width:100%;
         filter: drop-shadow(0px 3px 9px rgba(0,0,0,0.6));
     }
 }

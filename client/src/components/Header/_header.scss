@@ -5,7 +5,6 @@
     margin-bottom: calc(5px + 5vmin);
     text-align:left;
     padding: calc(1px + 1vmin);
-    
 }
 
 .Header--title{
@@ -14,6 +13,10 @@
     margin: calc(2px + 1vmin);
     padding-left: calc(5px + 5vmin);
     text-shadow: 1px 1px 3px #000;
+}
+
+.Header--subtitle{
+  text-align: right;
 }
 /*Screens*/
 @media (min-width: 800px) and (max-width: 1440px) {
@@ -32,10 +35,8 @@
       /* For a negative slope, we have to invert the breakpoints */
       line-height: calc( 120% + 3.2 * (100vw - 500px) / (320 - 500) );
     }
+    .Header--subtitle{
+      font-size: calc( 1.2rem + 16 * (100vw - 320px) / (500 - 320) );
+      line-height: calc( 120% + 3.2 * (100vw - 500px) / (320 - 500) );
+    }
   }
-.Header--subtitle{
-    font-size: 3rem;
-    // margin-bottom: calc(1px + 1vmin);
-     padding-right: calc(2px + 1vmin);
-    text-align: right;
-}
