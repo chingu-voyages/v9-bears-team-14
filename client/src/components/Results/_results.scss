@@ -22,6 +22,20 @@
         margin:calc(3px + 3vmin);
     }
 
+    .Results--title{
+        letter-spacing: .6rem;
+        text-align: center;
+        padding:calc(5px + 5vmin);
+        text-shadow: 1px 1px 3px #000;
+        color: #910000;
+    }
+
+    .Results--wrapper {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        justify-items: center;
+      }
 
     .Results--card {
         position:relative;
@@ -48,30 +62,14 @@
         top:70%;
         text-align: center;
     }
+
+
     .Results--image {
         width:100%;
         border-radius: 3px;
         filter: drop-shadow(0px 3px 9px rgba(0,0,0,0.6));
     }
-    .Results--title{
-        letter-spacing: .6rem;
-        text-align: center;
-        padding:calc(5px + 5vmin);
-        text-shadow: 1px 1px 3px #000;
-        color: #910000;
-    }
 
-
-    .Results--wrapper {
-        display: grid;
-        grid-gap: 20px;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        justify-items: center;
-      }
-    
-    .Title--heading{
-        font-size:2rem;
-    }
 }
 
 /*iphone-x (375px) */
@@ -91,17 +89,19 @@
         padding:calc(3px + 3vmin);
     }
 
+
+
+    .Results--title{
+        text-align: center;
+        padding:calc(1px + 3vmin);
+    }
+
     .Results--wrapper {
         display: grid;
         grid-gap: 10px;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         justify-items: center;
         padding:calc(2px + 2vmin);
-      }
-
-    .Results--title{
-        text-align: center;
-        padding:calc(1px + 3vmin);
     }
 
     .Results--card {
@@ -109,13 +109,20 @@
         border-radius: 3px;
     }
 
+    .Results--card .after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        color: #FFF;
+        padding: calc(5px + 3vmin);
+    }
+
     .Results--card:hover .after {
         display: block;
         background: rgba(0, 0, 0, .6);
-    }
-
-    .Title__Wrapper{
-        padding:calc(1px + 3vmin);
     }
 
     .Results--card--title{
@@ -123,7 +130,6 @@
         top:70%;
         text-align: center;
     }
-
 
     .Results--image {
         border-radius:5px; 
@@ -134,7 +140,7 @@
 
 
   
-
+    //desktops
   @media (min-width: 800px) and (max-width: 1440px) {
     .Results--title {
       font-size: calc( 3.5rem + 16 * (100vw - 800px) / (1440 - 800) );
