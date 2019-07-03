@@ -13,7 +13,7 @@
 
 
 /*Macbook-air 2018 (1024px)*/
-@media (min-width:1024px){
+@media (min-width:800px){
 
     .Results--container{
         display: grid;
@@ -72,7 +72,7 @@
 
 }
 
-/*iphone-x (375px) */
+/*iphone-x (375px) vertical*/
 @media (max-width:500px){
 
     .Results--container{
@@ -129,6 +129,7 @@
         width:100%;
     }
 }
+
 
 
   
