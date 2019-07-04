@@ -12,15 +12,12 @@ function App() {
   const videoEl = React.createRef();
 
   const handleClick = e => {
-    console.log(videoEl)
     if (videoEl.current.contains(e.target)) {
-      // inside click
-      console.log('clicked inside');
-      setPreview(true)
+      setPreview(true)       // outside click opens preview component
       return;
     }
-    // outside click 
-    setPreview(false)
+    
+    setPreview(false)       // outside click closes preview component
   };
   return (
       <CountryContext.Provider value={ {countrySelected, setSelectedCountry}} >
