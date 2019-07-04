@@ -1,14 +1,22 @@
+
+.Preview__Wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin:calc(3px + 3vmin);
+}
+
 .Preview__Container{
     position: relative;
-    padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+    padding-top: 56.25% ;/* Player ratio: 100 / (1280 / 720) */
 }
 
 
 .player{
-    position: fixed;
-    top: 25%;
+    position: fixed; 
+    top: 20%;
     left: 25%;
-    width: 100%;
-    height: 100%;
     z-index:1;
+    margin:calc(3px + 3vmin);
+    padding:calc(3px + 3vmin);
 }

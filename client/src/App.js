@@ -25,9 +25,11 @@ function App() {
           <Header/>
           <Map />
           <Results  clicked={setPreview}/>
+
+          {showPreview && <React.Fragment><Modal/> <Preview ref={videoEl} clicked={handleClick}/></React.Fragment>}
         </div>
         
-        {showPreview && <React.Fragment><Modal/> <Preview ref={videoEl} clicked={handleClick}/></React.Fragment>}
+        
       </CountryContext.Provider>
   );
 }
