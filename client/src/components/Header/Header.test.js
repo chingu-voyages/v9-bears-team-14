@@ -16,7 +16,7 @@ describe("Header",()=>{
     it('should render with Geo-Foods title', () => {
         const wrapper = shallow(<Header />);
         const h1 = wrapper.find('h1');
-        expect(h1.text()).toEqual('Geo-Foods');
+        expect(h1.text()).toEqual('Geo Foods');
       });
 })
 

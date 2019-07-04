@@ -33,6 +33,16 @@ test('renders App without Error',()=>{
 });
 
 
+test('it has a Header component',()=>{
+  const  wrapper = setUp();
+  expect(findComponentLength(wrapper,Header)).toBe(1);
+});
+
+test('it has a Map component',()=>{
+  const  wrapper = setUp();
+  expect(findComponentLength(wrapper,Map)).toBe(1);
+});
+
 test('it has a Results component',()=>{
   const  wrapper = setUp();
   expect(findComponentLength(wrapper,Results)).toBe(1);
