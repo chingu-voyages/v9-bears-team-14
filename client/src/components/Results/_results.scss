@@ -10,6 +10,14 @@
 .Results--wrapper {
     max-width: 980px;
     width: 100%;
+    margin-top: calc(10px + 3vmin);
+}
+
+.Results--error{
+    letter-spacing: .3rem;
+    text-align: center;
+    text-shadow: 1px 1px 3px #000;
+    padding:calc(10px + 3vmin);
 }
 
 
@@ -199,6 +207,11 @@
         /* For a negative slope, we have to invert the breakpoints */
         line-height: calc( 120% + 4.2 * (100vw - 1440px) / (800 - 1400) );
     }
+    .Results--error{
+        font-size: calc( 3.5rem + 16 * (100vw - 800px) / (1440 - 800) );
+        /* For a negative slope, we have to invert the breakpoints */
+        line-height: calc( 120% + 4.2 * (100vw - 1440px) / (800 - 1400) );
+    }
   }
 
 
@@ -214,6 +227,11 @@
         /* For a negative slope, we have to invert the breakpoints */
         line-height: calc( 120% + 4.2 * (100vw - 1024px) / (640 - 1024) );
     }
+    .Results--error{
+        font-size: calc( 2.5rem + 16 * (100vw - 640px) / (1024 - 640) );
+        /* For a negative slope, we have to invert the breakpoints */
+        line-height: calc( 120% + 3.2 * (100vw - 1024px) / (640 - 1024) );
+    }
   }
 
   /* RESPONSIVE FONT  MOBILE VERTICAL*/
@@ -228,4 +246,10 @@
         /* For a negative slope, we have to invert the breakpoints */
         line-height: calc( 120% + 4.2 * (100vw - 500px) / (320 - 500) );
     }
+    .Results--error {
+        font-size: calc( 2.5rem + 16 * (100vw - 320px) / (500 - 320) );
+        /* For a negative slope, we have to invert the breakpoints */
+        line-height: calc( 120% + 3.2 * (100vw - 500px) / (320 - 500) );
+      }    
   }
+
