@@ -74,7 +74,7 @@
 }
 
 /*MOBILE SCREENS*/
-@media (max-width:500px){
+@media (max-width:500px) and (max-height:800px){
 
     .Results--container{
         display: grid;
@@ -83,17 +83,15 @@
         margin-top:calc(5px + 5vmin);
     }
 
+    .Results--Header--title{
+        padding:calc(3px + 3vmin);
+    }
+
     .Results--title{
         color: #910000;
         letter-spacing: .3rem;
         text-align: center;
         text-shadow: 1px 1px 3px #000;
-        padding:calc(3px + 3vmin);
-    }
-
-    .Results--title{
-        text-align: center;
-        padding:calc(1px + 3vmin);
     }
 
     .Results--wrapper {
@@ -131,6 +129,60 @@
     }
 }
 
+@media (max-height:500px) and (max-width:800px){
+
+    .Results--container{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        margin-top:calc(5px + 5vmin);
+    }
+
+    .Results--Header--title{
+        padding:calc(3px + 3vmin);
+    }
+
+    .Results--title{
+        color: #910000;
+        letter-spacing: .3rem;
+        text-align: center;
+        text-shadow: 1px 1px 3px #000;
+    }
+
+    .Results--wrapper {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        justify-items: center;
+        padding:calc(2px + 2vmin);
+    }
+
+    .Results--card {
+        position:relative;
+        border-radius: 3px;
+        margin:calc(5px + 2vmin);
+        margin-top:calc(5px + 5vmin);
+    }
+
+    .Results--card .after {
+        border-radius:5px;
+        padding:calc(5px + 2vmin);
+        border-bottom:5px solid #910000;
+    }
+
+
+    .Results--card--title{
+        text-align: center;
+        color: #4d4d4d;
+        letter-spacing: .3rem;
+        padding: calc(2px + 1vmin);
+    }
+
+    .Results--image {
+        border-radius:5px; 
+        width:100%;
+    }
+}
 
 
   
