@@ -202,7 +202,7 @@
   }
 
 
-/*LANDSCAPE FONT*/
+/*RESPONSIVE FONT  MOBILE LANDSCAPE */
   @media (min-width: 640px) and (max-width: 1024px) and (min-height:360px) and (max-height:768px) {
     .Results--title {
       font-size: calc( 2.5rem + 16 * (100vw - 640px) / (1024 - 640) );
@@ -210,13 +210,13 @@
       line-height: calc( 120% + 3.2 * (100vw - 1024px) / (640 - 1024) );
     }
     .Results--card--title{
-        font-size: calc( 1.8rem + 16 * (100vw - 640px) / (500 - 640) );
+        font-size: calc( 1.8rem + 16 * (100vw - 640px) / (1024 - 640) );
         /* For a negative slope, we have to invert the breakpoints */
         line-height: calc( 120% + 4.2 * (100vw - 1024px) / (640 - 1024) );
     }
   }
 
-  /* RESPONSIVE FONT  MOBILE vertical*/
+  /* RESPONSIVE FONT  MOBILE VERTICAL*/
   @media (min-width: 320px) and (max-width: 500px) {
     .Results--title {
       font-size: calc( 2.5rem + 16 * (100vw - 320px) / (500 - 320) );
