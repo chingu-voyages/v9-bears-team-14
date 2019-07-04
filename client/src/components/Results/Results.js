@@ -18,7 +18,7 @@ const Results = (props) => {
                         </div>  
                         <div className="Results--wrapper">
                             {recipes.map((meal) => 
-                                <div key={meal.idMeal} className="Results--card">
+                                <div key={meal.idMeal} className="Results--card" id={MediaList.idMeal} onClick={()=>props.clicked(prevState=>!prevState)}>
                                     <img className="Results--image"src={meal.strMealThumb} alt={meal.strMeal}/>
                                     <div className="after"><h1  className="Results--card--title">{meal.strMeal}</h1></div>
                                 </div>
