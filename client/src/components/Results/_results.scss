@@ -1,4 +1,5 @@
 
+/*DEFAULT STYLING*/
 .Results--title{
     color: #910000;
     letter-spacing: .3rem;
@@ -12,7 +13,7 @@
 }
 
 
-/*Macbook-air 2018 (1024px)*/
+/*DESKTOP SCREENS*/
 @media (min-width:800px){
 
     .Results--container{
@@ -72,7 +73,7 @@
 
 }
 
-/*iphone-x (375px) vertical*/
+/*MOBILE SCREENS*/
 @media (max-width:500px){
 
     .Results--container{
@@ -133,7 +134,7 @@
 
 
   
-    //desktops
+/*RESPONSIVE FONT DESKTOP*/
   @media (min-width: 800px) and (max-width: 1440px) {
     .Results--title {
       font-size: calc( 3.5rem + 16 * (100vw - 800px) / (1440 - 800) );
@@ -147,7 +148,7 @@
     }
   }
 
-  /*MOBILE*/
+  /* RESPONSIVE FONT  MOBILE*/
   @media (min-width: 320px) and (max-width: 500px) {
     .Results--title {
       font-size: calc( 2.5rem + 16 * (100vw - 320px) / (500 - 320) );

@@ -8,7 +8,7 @@ const {countrySelected} = useContext(CountryContext)
 const recipes = useRecipes(countrySelected)
 return (
     <div className="Results--container">
-        <div className="Results--wrapper--title">
+        <div className="Results--Header--title">
             {countrySelected.length > 0 &&<h1 className="Results--title">{MAP_CONSTANTS.supportedCountries[countrySelected]} Recipes</h1>}         
         </div>
         <div className="Results--wrapper">
