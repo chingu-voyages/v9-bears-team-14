@@ -70,12 +70,12 @@ const Preview=React.forwardRef((props, ref) =>{
     console.log(embedYoutube);
     useEffect(() => {
         // add when mounted
-        document.addEventListener('touchstart', props.clicked)
+        document.addEventListener('touchend', props.clicked)
         document.addEventListener("mousedown",props.clicked);
         // return function to be called when unmounted
         return () => {
           document.removeEventListener("mousedown", props.clicked);
-          document.removeEventListener("touchstart", props.clicked);
+          document.removeEventListener("touchend", props.clicked);
         };
       }, [props.clicked]);
 
