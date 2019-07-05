@@ -58,12 +58,16 @@ const recipeTest={
       }
     ]
   }
-
+//"https://www.youtube.com/watch?v=4aZr5hZXP_s"
+  const YTREGEX = /watch\?v=/;
 
 
 const Preview=React.forwardRef((props, ref) =>{
     const {strYoutube}=recipeTest.meals[0];
+    const embedYoutube = strYoutube.replace(YTREGEX,'embed/');
 
+
+    console.log(embedYoutube);
     useEffect(() => {
         // add when mounted
         document.addEventListener("mousedown",props.clicked);
@@ -76,17 +80,24 @@ const Preview=React.forwardRef((props, ref) =>{
 
     return(
 
-        <div className="Preview__Wrapper">
-            <div className="Preview__Container" ref={ref}>
-                <ReactPlayer 
-                    url={strYoutube} 
-                    muted 
-                    className="player" 
+        // <div className="Preview__Wrapper">
+        //     <div className="Preview__Container" ref={ref}>
+        //         <ReactPlayer 
+        //             url={strYoutube} 
+        //             muted 
+        //             className="player" 
+        //         />
+        //     </div>
+
+        // </div>
+        <div className="Video__Container" ref={ref}>
+            <div className="Video__Wrapper">
+                <iframe
+                    title="Inline Frame Example"
+                    src={embedYoutube}
                 />
             </div>
-
         </div>
-        
     )
 })
 
