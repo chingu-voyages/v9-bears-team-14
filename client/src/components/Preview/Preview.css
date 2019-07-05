@@ -1,30 +1,3 @@
-/* 
-.Preview__Wrapper{
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    margin:calc(3px + 3vmin);
-}
-
-.Preview__Container{
-    position: relative;
-    /* padding-top: 56.25% ; */
-    /* Player ratio: 100 / (1280 / 720) 
-} 
-*/
-
-
-/* .player{
-    position: fixed; 
-    top: 0;
-    left: 0;
-    z-index:1;
-    margin:calc(3px + 3vmin);
-    padding:calc(3px + 3vmin);
-    width:100%;
-    height:100%;
-}  */
-
 
 .Video__Container{
     max-width:640px;
@@ -48,7 +21,7 @@
     position: fixed;
     top: 25vh;
     left: 25vw;
-    width: 60%;
-    height: 60%;
+    width: 50vw;
+    height: 50vh;
     max-width:640px;
 }

@@ -82,16 +82,6 @@ const Preview=React.forwardRef((props, ref) =>{
 
     return(
 
-        // <div className="Preview__Wrapper">
-        //     <div className="Preview__Container" ref={ref}>
-        //         <ReactPlayer 
-        //             url={strYoutube} 
-        //             muted 
-        //             className="player" 
-        //         />
-        //     </div>
-
-        // </div>
         <div className="Video__Container" ref={ref}>
             <div className="Video__Wrapper">
                 <iframe
