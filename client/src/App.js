@@ -12,6 +12,7 @@ function App() {
   const videoEl = React.createRef();
 
   const handleClick = e => {
+    e.preventDefault();
     if (videoEl.current.contains(e.target)) {
       setPreview(true)       // outside click opens preview component
       return;
