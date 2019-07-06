@@ -202,7 +202,7 @@
       line-height: calc( 120% + 4.2 * (100vw - 1440px) / (800 - 1400) );
     }
     .Results--card--title{
-        font-size: calc( .8rem + 16 * (100vw - 800px) / (1440 - 800) );
+        font-size: calc( .7rem + 16 * (100vw - 800px) / (1440 - 800) );
         /* For a negative slope, we have to invert the breakpoints */
         line-height: calc( 120% + 4.2 * (100vw - 1440px) / (800 - 1400) );
     }

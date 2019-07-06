@@ -20,7 +20,7 @@ const Results = (props) => {
                             {recipes.map((meal) => 
                                 <div key={meal.idMeal} className="Results--card" id={MediaList.idMeal} onClick={()=>props.clicked(prevState=>!prevState)}>
                                     <img className="Results--image"src={meal.strMealThumb} alt={meal.strMeal}/>
-                                    <div className="after"><h1  className="Results--card--title">{meal.strMeal}</h1></div>
+                                    <span className="after"><h1  className="Results--card--title">{meal.strMeal}</h1></span>
                                 </div>
                             )} 
                         </div>
