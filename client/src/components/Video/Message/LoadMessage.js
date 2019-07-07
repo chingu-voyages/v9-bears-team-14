@@ -1,6 +1,6 @@
 import React from "react";
 import LoadSpinner from "../../LoadingSpinner/LoadSpinner";
-import "./Message.css";
+import "./_message.scss";
 const LoadMessage = () => {
   return (
     <div className="Video__Wrapper--Message">

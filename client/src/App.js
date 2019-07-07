@@ -26,7 +26,10 @@ function App() {
       <div className="App">
         <Header />
         <Map />
-        <Results clickedPreview={setPreview} clickedModal={setModal} />
+        <Results 
+          clickedPreview={setPreview} 
+          clickedModal={setModal} 
+        />
         {showModal && (
           <React.Fragment>
             <Modal />{" "}

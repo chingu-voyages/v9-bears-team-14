@@ -3,7 +3,7 @@ import axios from 'axios';
 import Video from '../Video/Video';
 import ErrorMessage from '../Video/Message/ErrorMessage';
 import LoadMessage from '../Video/Message/LoadMessage';
-import '../Video/Video.css'
+import '../Video/_video.scss'
 
 
 
@@ -54,7 +54,7 @@ const Preview=React.forwardRef(({clicked,previewSelected}, ref) =>{
     return(
       <div className="Video__Container" ref={ref}>   
         { isError && <ErrorMessage/> }
-        {isLoading? <LoadMessage/> : youtubeLink && <Video youtubeLink={youtubeLink}/>} 
+        {isLoading? <LoadMessage/> : youtubeLink && youtubeLink != "" ? <Video youtubeLink={youtubeLink}/> : <ErrorMessage/> } 
       </div>
     );
 })

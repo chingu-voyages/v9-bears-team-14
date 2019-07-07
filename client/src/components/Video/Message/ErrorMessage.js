@@ -1,6 +1,6 @@
 import React from "react";
-import "./Message.css";
-import "./ErrorMessage.css";
+import "./_message.scss";
+import "./_errormessage.scss";
 const ErrorMessage = () => {
   return (
     <div className="Video__Wrapper--Message">

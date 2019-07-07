@@ -29,7 +29,7 @@ const Results = (props) => {
                                 </div>
                             )} 
                         </div>
-                        {/* <Recipe /> */}
+                        <Recipe />
                     </React.Fragment>    
                 );
     }
