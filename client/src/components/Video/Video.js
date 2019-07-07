@@ -1,7 +1,4 @@
-import React, { useState, useEffect } from "react";
-// import axios from "axios";
-// import ErrorMessage from "./ErrorMessage";
-// import LoadMessage from "./LoadMessage";
+import React from "react";
 import "./Video.css";
 
 const Video = props => {

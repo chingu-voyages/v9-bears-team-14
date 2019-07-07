@@ -1,8 +1,8 @@
 import React,{useState,useEffect} from 'react';
 import axios from 'axios';
 import Video from '../Video/Video';
-import ErrorMessage from '../Video/ErrorMessage';
-import LoadMessage from '../Video/LoadMessage';
+import ErrorMessage from '../Video/Message/ErrorMessage';
+import LoadMessage from '../Video/Message/LoadMessage';
 import '../Video/Video.css'
 import "./Preview.css"
 
@@ -56,7 +56,7 @@ const Preview=React.forwardRef((props, ref) =>{
         { isError && <ErrorMessage/> }
         {isLoading? <LoadMessage/> : youtubeLink && <Video youtubeLink={youtubeLink}/>} 
       </div>
-    )
+    );
 })
 
 export default Preview;

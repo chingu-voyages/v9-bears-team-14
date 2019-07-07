@@ -1,5 +1,5 @@
 import React from "react";
-import "./Video.css";
+import "./Message.css";
 import "./ErrorMessage.css";
 const ErrorMessage = () => {
   return (
