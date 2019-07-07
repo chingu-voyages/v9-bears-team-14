@@ -13,12 +13,11 @@ const Preview=React.forwardRef(({clicked,previewSelected}, ref) =>{
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
-  const convertYoutubeLink=(link)=>{
+  const convertYoutubeLink =(link)=>{
     const YTREGEX = /watch\?v=/;        //we need to convert the watch endpoint to embed endpoint to use iframe 
     const embedYoutube = link.replace(YTREGEX,'embed/');
     return embedYoutube
   }
-
     useEffect(() => {
         // add when mounted
         document.addEventListener('touchend', clicked)
@@ -38,9 +37,11 @@ const Preview=React.forwardRef(({clicked,previewSelected}, ref) =>{
               try{
                 if(previewSelected){
                   const response=  await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${previewSelected}`);
-                  const ytLink = response.data.meals[0].strYoutube;
-                  const embedLink = convertYoutubeLink(ytLink);
-                  setYoutubeLink(embedLink);
+                  if(response.data.meals && response.data.meals.length >0){
+                    const ytLink = response.data.meals[0].strYoutube;
+                    const embedLink = convertYoutubeLink(ytLink);
+                    setYoutubeLink(embedLink);
+                  }
                 }
               }
               catch(error){
