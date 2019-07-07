@@ -1,4 +1,4 @@
-import React, {useState,useRef} from 'react';
+import React, {useState} from 'react';
 import Map from './components/Map/Map';
 import Header from './components/Header/Header';
 import Results from './components/Results/Results';
@@ -8,26 +8,26 @@ import Modal from './components/Modal/Modal';
 
 function App() {
   const [countrySelected, setSelectedCountry] = useState('')
-  const [showPreview,setPreview] = useState(false);
+  const [showModal,setModal] = useState(false);
+  const [previewSelected,setPreview]=useState(null);
   const videoEl = React.createRef();
 
-  const handleClick = e => {
+  const modalHandler = e => {
     e.preventDefault();
     if (videoEl.current.contains(e.target)) {
-      setPreview(true)       // outside click opens preview component
+      setModal(true)       // outside click opens preview component
       return;
     }
-    
-    setPreview(false)       // outside click closes preview component
+    setModal(false)       // outside click closes preview component
   };
   return (
       <CountryContext.Provider value={ {countrySelected, setSelectedCountry}} >
         <div className="App">
           <Header/>
           <Map />
-          <Results  clicked={setPreview}/>
+          <Results clickedPreview={setPreview}  clickedModal={setModal}/>
 
-          {showPreview && <React.Fragment><Modal/> <Preview ref={videoEl} clicked={handleClick}/></React.Fragment>}
+          {showModal && <React.Fragment><Modal/> <Preview  ref={videoEl} previewSelected={previewSelected} clicked={modalHandler}/></React.Fragment>}
         </div>
         
         
