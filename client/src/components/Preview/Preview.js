@@ -4,7 +4,7 @@ import Video from '../Video/Video';
 import ErrorMessage from '../Video/Message/ErrorMessage';
 import LoadMessage from '../Video/Message/LoadMessage';
 import '../Video/Video.css'
-import "./Preview.css"
+
 
 
 

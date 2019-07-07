@@ -16,11 +16,6 @@ const Results = (props) => {
         
     }
 
-
-    //create a hook to do async data fetch
-    //https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772
-    
-
     const renderRecipes = ()=>{
         return(    <React.Fragment>
                         <div className="Results--Header--title">
@@ -34,7 +29,7 @@ const Results = (props) => {
                                 </div>
                             )} 
                         </div>
-                        <Recipe />
+                        {/* <Recipe /> */}
                     </React.Fragment>    
                 );
     }
