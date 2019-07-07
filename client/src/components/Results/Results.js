@@ -25,7 +25,7 @@ const Results = (props) => {
                             {recipes.map((meal) => 
                                 <div key={meal.idMeal} className="Results--card" id={meal.idMeal} onClick={()=>displayPreview(meal.idMeal)}>
                                     <img className="Results--image"src={meal.strMealThumb} alt={meal.strMeal}/>
-                                    <span className="after"><h1  className="Results--card--title">{meal.strMeal}</h1></span>
+                                    <div className="after"><h1  className="Results--card--title">{meal.strMeal}</h1></div>
                                 </div>
                             )} 
                         </div>
