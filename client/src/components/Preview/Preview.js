@@ -8,7 +8,7 @@ import "./Preview.css"
 
 
 
-const Preview=React.forwardRef((props, ref) =>{
+const Preview=React.forwardRef(({clicked,previewSelected}, ref) =>{
   const [youtubeLink,setYoutubeLink]= useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -21,14 +21,14 @@ const Preview=React.forwardRef((props, ref) =>{
 
     useEffect(() => {
         // add when mounted
-        document.addEventListener('touchend', props.clicked)
-        document.addEventListener("mousedown",props.clicked);
+        document.addEventListener('touchend', clicked)
+        document.addEventListener("mousedown",clicked);
         // cleanup function to be called when unmounted
         return () => {
-          document.removeEventListener("mousedown", props.clicked);
-          document.removeEventListener("touchend", props.clicked);
+          document.removeEventListener("mousedown", clicked);
+          document.removeEventListener("touchend", clicked);
         };
-      }, [props.clicked]);
+      }, [clicked]);
 
       useEffect(
         ()=>{
@@ -36,8 +36,8 @@ const Preview=React.forwardRef((props, ref) =>{
               setIsError(false);
               setIsLoading(true);
               try{
-                if(props.previewSelected){
-                  const response=  await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${props.previewSelected}`);
+                if(previewSelected){
+                  const response=  await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${previewSelected}`);
                   const ytLink = response.data.meals[0].strYoutube;
                   const embedLink = convertYoutubeLink(ytLink);
                   setYoutubeLink(embedLink);
@@ -49,7 +49,7 @@ const Preview=React.forwardRef((props, ref) =>{
               setIsLoading(false);
           };
           fetchYTLink();
-        },[props.previewSelected])
+        },[previewSelected])
 
     return(
       <div className="Video__Container" ref={ref}>   
