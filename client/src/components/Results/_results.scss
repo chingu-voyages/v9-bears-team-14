@@ -192,6 +192,25 @@
     }
 }
 
+/*RESPONSIVE FONT BIG DESKTOP*/
+@media (min-width: 1441px) and (max-width: 2000px) {
+    .Results--title {
+      font-size: calc(5.5rem + 16 * (100vw - 1441px) / (2000 - 1441) );
+      /* For a negative slope, we have to invert the breakpoints */
+      line-height: calc( 120% + 4.2 * (100vw - 2000px) / (1441 - 2000) );
+    }
+    .Results--card--title{
+        font-size: calc( 1.2rem + 16 * (100vw - 1441px) / (2000 - 1441) );
+        /* For a negative slope, we have to invert the breakpoints */
+        line-height: calc( 120% + 4.2 * (100vw - 2000px) / (1441 - 2000) );
+    }
+    .Results--error{
+        font-size: calc( 5.5rem + 16 * (100vw - 1441px) / (2000 - 1441) );
+        /* For a negative slope, we have to invert the breakpoints */
+        line-height: calc( 120% + 4.2 * (100vw - 2000px) / (1441 - 2000) );
+    }
+  }
+
 
 
 /*RESPONSIVE FONT DESKTOP*/
