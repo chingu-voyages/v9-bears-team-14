@@ -1,0 +1,8 @@
+.Modal__Container{
+    background:rgba(0,0,0,.6);
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    left:0;
+    top:0;
+}

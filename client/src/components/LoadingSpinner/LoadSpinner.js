@@ -2,13 +2,13 @@ import React from 'react';
 import Loader from 'react-loader-spinner'
 
 import './LoadSpinner.css';
-const LoadSpinner =()=>{
+const LoadSpinner =({color,message})=>{
 
     return(
          <div className="LoadSpinner__Container">
              <div className="LoadSpinner__Content">
-                <h1>Loading your Recipes</h1>
-                <Loader type="ThreeDots" color="black" height={80} width={80} /> 
+                <h1>{message}</h1>
+                <Loader type="ThreeDots" color={color} height={80} width={80} /> 
              </div>
         </div>
     )
