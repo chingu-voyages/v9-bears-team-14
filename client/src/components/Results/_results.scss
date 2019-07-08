@@ -200,7 +200,7 @@
       line-height: calc( 120% + 4.2 * (100vw - 2000px) / (1441 - 2000) );
     }
     .Results--card--title{
-        font-size: calc( 1.2rem + 16 * (100vw - 1441px) / (2000 - 1441) );
+        font-size: calc( 2.3rem + 16 * (100vw - 1441px) / (2000 - 1441) );
         /* For a negative slope, we have to invert the breakpoints */
         line-height: calc( 120% + 4.2 * (100vw - 2000px) / (1441 - 2000) );
     }
@@ -221,7 +221,7 @@
       line-height: calc( 120% + 4.2 * (100vw - 1440px) / (800 - 1400) );
     }
     .Results--card--title{
-        font-size: calc( .7rem + 16 * (100vw - 800px) / (1440 - 800) );
+        font-size: calc( 1.3rem + 16 * (100vw - 800px) / (1440 - 800) );
         /* For a negative slope, we have to invert the breakpoints */
         line-height: calc( 120% + 4.2 * (100vw - 1440px) / (800 - 1400) );
     }
