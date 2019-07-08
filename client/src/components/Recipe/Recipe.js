@@ -12,8 +12,8 @@ const Recipe = ({recipeId}) => {
         ingredientList.push(`${recipe[amountsKeys[i]]}  ${recipe[ingredientsKeys[i]]}`)
     }
     return (
-    <div className="Results__wrapper">
-        <div className="Results__card">
+    <div className="Results--wrapper">
+        <div className="Results--card">
             <h2>{recipe.strMeal}</h2>
             <h3>Ingredients</h3>
             {ingredientList.map((item, index) => 

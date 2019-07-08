@@ -21,7 +21,7 @@ const useRecipes= (id)=>{
                setIsLoading(true);
                const api = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`            
                try{
-                   if(id){
+                   if(id > 0){
                        const response = await axios.get(api);
                        setRecipe(response.data.meals[0]);
                        console.log('api',response.data.meals[0])
