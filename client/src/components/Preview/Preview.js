@@ -55,7 +55,7 @@ const Preview=React.forwardRef(({clicked,previewSelected}, ref) =>{
     return(
       <div className="Video__Container" ref={ref}>   
         { isError && <ErrorMessage/> }
-        {isLoading? <LoadMessage/> : youtubeLink && youtubeLink != "" ? <Video youtubeLink={youtubeLink}/> : <ErrorMessage/> } 
+        {isLoading? <LoadMessage/> : youtubeLink && youtubeLink !== "" ? <Video youtubeLink={youtubeLink}/> : <ErrorMessage/> } 
       </div>
     );
 })

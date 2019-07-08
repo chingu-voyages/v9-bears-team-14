@@ -13,7 +13,6 @@ const Results = (props) => {
     const displayPreview =(id)=>{
         props.clickedModal(prevState=>!prevState)
         props.clickedPreview(id);
-        
     }
 
     const renderRecipes = ()=>{
