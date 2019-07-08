@@ -28,8 +28,10 @@ const Results = (props) => {
                                 </div>
                             )} 
                         </div>
-                        <Recipe />
-                    </React.Fragment>    
+                        <Recipe
+                        recipeId={52782}/>
+                    </React.Fragment>
+                    
                 );
     }
 return (

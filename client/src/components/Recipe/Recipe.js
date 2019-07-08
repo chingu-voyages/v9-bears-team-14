@@ -1,6 +1,7 @@
 import React from 'react';
-import recipe from '../../tests/recipe'
-const Recipe = () => {
+import getRecipeInstructions from '../../hooks/getRecipeInstructions'
+const Recipe = ({recipeId}) => {
+    const [{recipe}] = getRecipeInstructions(recipeId)
     const ingredientList = []
     const keys = Object.keys(recipe)
     const ingredientsKeys = keys.filter(key => 
