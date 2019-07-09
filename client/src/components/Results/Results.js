@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import useRecipes from "../../hooks/useRecipes";
 import CountryContext from "../../context/country-context";
 import MAP_CONSTANTS from "../Map/MapConstants/MAP_CONSTANTS";
@@ -9,12 +9,17 @@ import "./_results.scss";
 const Results = (props) => {
     const {countrySelected} = useContext(CountryContext)
     const [{recipes,isLoading,isError}] = useRecipes(countrySelected);
+    const [recipeId, setRecipeId] = useState(-1)
 
+    const display = (id) => {
+        displayPreview(id)
+        setRecipeId(id)
+    }
     const displayPreview =(id)=>{
         props.clickedModal(prevState=>!prevState)
         props.clickedPreview(id);
     }
-
+    
     const renderRecipes = ()=>{
         return(    <React.Fragment>
                         <div className="Results--Header--title">
@@ -22,14 +27,15 @@ const Results = (props) => {
                         </div>  
                         <div className="Results--wrapper">
                             {recipes.map((meal) => 
-                                <div key={meal.idMeal} className="Results--card" id={meal.idMeal} onClick={()=>displayPreview(meal.idMeal)}>
+                                <div key={meal.idMeal} className="Results--card" id={meal.idMeal} onClick={()=>display(meal.idMeal)}>
                                     <img className="Results--image"src={meal.strMealThumb} alt={meal.strMeal}/>
                                     <div className="after"><h1  className="Results--card--title">{meal.strMeal}</h1></div>
                                 </div>
                             )} 
                         </div>
-                        <Recipe />
-                    </React.Fragment>    
+                        {recipeId > 0 && <Recipe recipeId={recipeId}/>}
+                    </React.Fragment>
+                    
                 );
     }
 return (

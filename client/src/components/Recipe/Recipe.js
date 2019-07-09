@@ -1,6 +1,7 @@
 import React from 'react';
-import recipe from '../../tests/recipe'
-const Recipe = () => {
+import getRecipeInstructions from '../../hooks/getRecipeInstructions'
+const Recipe = ({recipeId}) => {
+    const [{recipe}] = getRecipeInstructions(recipeId)
     const ingredientList = []
     const keys = Object.keys(recipe)
     const ingredientsKeys = keys.filter(key => 
@@ -11,8 +12,8 @@ const Recipe = () => {
         ingredientList.push(`${recipe[amountsKeys[i]]}  ${recipe[ingredientsKeys[i]]}`)
     }
     return (
-    <div className="Results__wrapper">
-        <div className="Results__card">
+    <div className="Results--wrapper">
+        <div className="Results--card">
             <h2>{recipe.strMeal}</h2>
             <h3>Ingredients</h3>
             {ingredientList.map((item, index) => 
