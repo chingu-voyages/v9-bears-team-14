@@ -15,7 +15,6 @@ const useRecipes= (id)=>{
 
     useEffect(
         ()=>{
-           
            const fetchRecipe = async () => {
                setIsError(false);
                setIsLoading(true);
@@ -24,7 +23,6 @@ const useRecipes= (id)=>{
                    if(id > 0){
                        const response = await axios.get(api);
                        setRecipe(response.data.meals[0]);
-                       console.log('api',response.data.meals[0])
                    }
                }
                catch(error){
@@ -38,7 +36,6 @@ const useRecipes= (id)=>{
        },
        [id]     
    );
-   console.log('Recipe',{recipe})
    //return a recipe;
    return [{recipe,isLoading,isError}];
 }

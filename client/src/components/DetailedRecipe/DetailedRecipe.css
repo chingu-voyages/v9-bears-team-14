@@ -1,0 +1,36 @@
+
+.DetailedRecipe__Container{
+    /* margin:0 auto; */
+    /* margin:calc(3px + 3vmin); */
+    position:fixed;
+    left:50vw;  
+    top:50vh;                                /*amazin trick to center fixed element*/
+    transform: translate(-50%, -50%);       /*https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/*/
+}
+
+.DetailedRecipe__Content{
+
+    display:grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    border:1px solid pink;
+    background:white;
+    padding:calc(3px + 3vmin);
+    grid-gap:20px;
+}
+
+.DetailedRecipe--Ingredients{
+    padding:calc(3px + 3vmin);
+    background:green;
+}
+
+
+.DetailedRecipe--Directions{
+    padding:calc(3px + 3vmin);
+    background:blue;
+}
+
+.Directions--list{
+    padding:calc(3px + 3vmin);
+}

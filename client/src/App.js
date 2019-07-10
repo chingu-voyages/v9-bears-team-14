@@ -5,7 +5,7 @@ import Results from "./components/Results/Results";
 import CountryContext from "./context/country-context";
 import Preview from "./components/Preview/Preview";
 import Modal from "./components/Modal/Modal";
-
+import DetailedRecipe from './components/DetailedRecipe/DetailedRecipe';
 function App() {
   const [countrySelected, setSelectedCountry] = useState("");
   const [showModal, setModal] = useState(false);
@@ -32,8 +32,13 @@ function App() {
         />
         {showModal && (
           <React.Fragment>
-            <Modal />{" "}
-            <Preview
+            <Modal />
+            {/* <Preview
+              ref={videoEl}
+              previewSelected={previewSelected}
+              clicked={modalHandler}
+            /> */}
+            <DetailedRecipe
               ref={videoEl}
               previewSelected={previewSelected}
               clicked={modalHandler}
