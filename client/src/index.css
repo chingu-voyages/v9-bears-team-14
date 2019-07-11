@@ -6,8 +6,10 @@
 }
 
 /*to allow easy conversion of px to REM */
+/*was originally 10px*/
 html{
   font-size:16px;
+
 }
 
 body {
