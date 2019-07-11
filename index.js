@@ -11,8 +11,8 @@ app.use(express.json());
 
 app.get('/users', async(req, res) => {
     try {
-        const users = await User.find({ })
-        res.send(users)
+        //making sure the database connects
+        res.send('testing')
     } catch (e) {
         res.status(500).send()
     }
