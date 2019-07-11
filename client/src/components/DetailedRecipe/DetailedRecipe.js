@@ -40,11 +40,6 @@ const DetailedRecipe = React.forwardRef(({ clicked, previewSelected }, ref) => {
             {strInstructions}
           </div>
         </div>
-        <div className="DetailedRecipe--Directions">
-          <div className="Directions__list">
-            {strInstructions}
-          </div>
-        </div>
       </div>
     </div>
   );

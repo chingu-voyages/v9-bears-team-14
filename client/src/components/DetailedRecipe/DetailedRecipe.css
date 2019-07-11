@@ -29,22 +29,11 @@
 
 .DetailedRecipe--Directions{
     /* padding:calc(3px + 3vmin);   */
-    overflow: hidden;
 }
 
 .Directions__list{
     margin:calc( 3vmin);
 }
-
-
-
-/*
- * With default user settings:
- * • 0.625rem = 10px
- * • 1.25rem  = 20px
- * • 2.5rem   = 40px
- */
-
 
 /*RESPONSIVE FONT BIG DESKTOP*/
 @media (min-width: 1441px) and (max-width: 2000px) {
