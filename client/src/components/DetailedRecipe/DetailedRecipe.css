@@ -1,4 +1,5 @@
 
+
 .DetailedRecipe__Container{
     position:fixed;
     left:50vw;  
@@ -35,6 +36,14 @@
     margin:calc( 3vmin);
 }
 
+
+
+/*
+ * With default user settings:
+ * • 0.625rem = 10px
+ * • 1.25rem  = 20px
+ * • 2.5rem   = 40px
+ */
 
 
 /*RESPONSIVE FONT BIG DESKTOP*/
