@@ -40,7 +40,7 @@
     .Directions__list{
       font-size: calc(1rem +  (100vw - 1441px) / (2000 - 1441) );
       /* For a negative slope, we have to invert the breakpoints */
-      line-height: calc( 120% + 4.2 * (100vw - 2000px) / (1441 - 2000) );
+      line-height: calc( 180% + 4.2 * (100vw - 2000px) / (1441 - 2000) );
     }
   }
 
@@ -62,7 +62,7 @@
     .Directions__list{
       font-size: calc( 1rem +  (100vw - 640px) / (1024 - 640) );
       /* For a negative slope, we have to invert the breakpoints */
-      line-height: calc( 120% + 3.2 * (100vw - 1024px) / (640 - 1024) );
+      line-height: calc( 180% + 3.2 * (100vw - 1024px) / (640 - 1024) );
     }
 
   }
@@ -72,6 +72,6 @@
     .Directions__list{
       font-size: calc( 1rem + (100vw - 320px) / (500 - 320) );
       /* For a negative slope, we have to invert the breakpoints */
-      line-height: calc( 120% + 3.2 * (100vw - 500px) / (320 - 500) );
+      line-height: calc( 180% + 3.2 * (100vw - 500px) / (320 - 500) );
     }
   }
