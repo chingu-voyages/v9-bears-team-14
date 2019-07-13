@@ -6,11 +6,9 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     gmail: {
-        type: String,
-        required: true
+        type: String
     }
 })
 
 
-const User = mongoose.model('User', userSchema)
-module.exports = User
+mongoose.model('users', userSchema)

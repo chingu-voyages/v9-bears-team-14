@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
+const {Schema} = mongoose;
 
-const recipeSchema = new mongoose.Schema({
+const recipeSchema = new Schema({
     recipeId: {
         type: Number,
         required: true,
@@ -15,8 +16,11 @@ const recipeSchema = new mongoose.Schema({
     }, 
     instructions: {
         type: String,
+    }, 
+    owner: {
+        type: mongoose.Schema.Types.ObjectId, 
+        required: true
     }
 })
 
-const Recipe = mongoose.model('Recipe',recipeSchema )
-module.exports = Recipe
+mongoose.model('Recipe',recipeSchema )
