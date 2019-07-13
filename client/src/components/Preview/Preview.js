@@ -5,10 +5,10 @@ import ErrorMessage from '../Video/Message/ErrorMessage';
 import LoadMessage from '../Video/Message/LoadMessage';
 import '../Video/_video.scss'
 
+//match.params.previewSelected
 
 
-
-const Preview=React.forwardRef(({clicked,previewSelected}, ref) =>{
+const Preview=React.forwardRef(({clicked,previewSelected,match}, ref) =>{
   const [youtubeLink,setYoutubeLink]= useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -35,8 +35,8 @@ const Preview=React.forwardRef(({clicked,previewSelected}, ref) =>{
               setIsError(false);
               setIsLoading(true);
               try{
-                if(previewSelected){
-                  const response=  await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${previewSelected}`);
+                if(match.params.previewSelected){
+                  const response=  await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${match.params.previewSelected}`);
                   if(response.data.meals && response.data.meals.length >0){
                     const ytLink = response.data.meals[0].strYoutube;
                     const embedLink = convertYoutubeLink(ytLink);
@@ -50,7 +50,7 @@ const Preview=React.forwardRef(({clicked,previewSelected}, ref) =>{
               setIsLoading(false);
           };
           fetchYTLink();
-        },[previewSelected])
+        },[match.params.previewSelected])
 
     return(
       <div className="Video__Container" ref={ref}>   

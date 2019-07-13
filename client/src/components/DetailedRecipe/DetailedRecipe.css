@@ -37,6 +37,9 @@
 
 /*RESPONSIVE FONT BIG DESKTOP*/
 @media (min-width: 1441px) and (max-width: 2000px) {
+  .Directions--title{
+
+  }
     .Directions__list{
       font-size: calc(1rem +  (100vw - 1441px) / (2000 - 1441) );
       /* For a negative slope, we have to invert the breakpoints */
@@ -48,6 +51,9 @@
 
 /*RESPONSIVE FONT DESKTOP*/ /*macbook air*/
   @media (min-width: 800px) and (max-width: 1440px) {
+    .Directions--title{
+
+    }
     .Directions__list{
       font-size: calc( 1rem +  (100vw - 800px) / (1440 - 800) );
       /* For a negative slope, we have to invert the breakpoints */
@@ -59,6 +65,9 @@
 
 /*RESPONSIVE FONT  MOBILE LANDSCAPE */
   @media (min-width: 640px) and (max-width: 1024px) and (min-height:360px) and (max-height:768px) {
+    .Directions--title{
+
+    }    
     .Directions__list{
       font-size: calc( 1rem +  (100vw - 640px) / (1024 - 640) );
       /* For a negative slope, we have to invert the breakpoints */
@@ -69,6 +78,9 @@
 
   /* RESPONSIVE FONT  MOBILE VERTICAL*/
   @media (min-width: 320px) and (max-width: 500px) {
+    .Directions--title{
+
+    }    
     .Directions__list{
       font-size: calc( 1rem + (100vw - 320px) / (500 - 320) );
       /* For a negative slope, we have to invert the breakpoints */

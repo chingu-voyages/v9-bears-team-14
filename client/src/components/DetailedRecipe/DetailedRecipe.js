@@ -3,9 +3,7 @@ import Preview from "../Preview/Preview";
 import getRecipeInstructions from "../../hooks/getRecipeInstructions";
 import "./DetailedRecipe.css";
 
-//display ingredients , check for nulls and blanks
-//display directions, add numbered steps to each sentence
-//have button for switching
+
 
 
 const DetailedRecipe = React.forwardRef(({ clicked, previewSelected }, ref) => {
@@ -37,6 +35,7 @@ const DetailedRecipe = React.forwardRef(({ clicked, previewSelected }, ref) => {
       <div className="DetailedRecipe__Content">
         <div className="DetailedRecipe--Directions">
           <div className="Directions__list">
+            <h1 className="Directions--title">Directions</h1>
             {strInstructions}
           </div>
         </div>
