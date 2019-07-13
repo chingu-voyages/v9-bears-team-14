@@ -6,7 +6,7 @@
 
 .Instructions--Heading{
     font-weight:600;
-    /* margin-bottom:calc(2.5vmin); */
+    margin-bottom:calc(2.5vmin);
 }
 
 .Instructions__Wrapper{
@@ -55,7 +55,8 @@
     }
 
     .Instruction--Content{
-      font-size: calc(.5rem + 16 * (100vw - 640px) / (1024 - 640) );
+      font-size: calc(.7rem + 16 * (100vw - 640px) / (1024 - 640) );
+      line-height: calc( 130% + 4.2 * (100vw - 2000px) / (1441 - 2000) );
     }
 
   }
@@ -67,6 +68,7 @@
     }
 
     .Instruction--Content{
-      font-size: calc(.5rem + 16 * (100vw - 320px) / (500 - 320) );
+      font-size: calc(.7rem + 16 * (100vw - 320px) / (500 - 320) );
+      line-height: calc( 130% + 4.2 * (100vw - 2000px) / (1441 - 2000) );
     }
   }
