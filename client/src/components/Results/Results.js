@@ -1,6 +1,6 @@
 import React, { useContext} from "react";
 import { Link } from "react-router-dom";
-import useRecipes from "../../hooks/useRecipes";
+import useResults from "../../hooks/useResults";
 import CountryContext from "../../context/country-context";
 import MAP_CONSTANTS from "../Map/MapConstants/MAP_CONSTANTS";
 import LoadSpinner from '../LoadingSpinner/LoadSpinner';
@@ -8,7 +8,7 @@ import "./_results.scss";
 
 const Results = (props) => {
     const {countrySelected} = useContext(CountryContext)
-    const [{recipes,isLoading,isError}] = useRecipes(countrySelected);
+    const [{recipes,isLoading,isError}] = useResults(countrySelected);
 
      const limitRecipeTitle = (title, limit = 25) => {
         const newTitle = [];

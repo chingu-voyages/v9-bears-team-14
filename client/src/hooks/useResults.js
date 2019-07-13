@@ -3,11 +3,11 @@ import MAP_CONSTANTS from '../components/Map/MapConstants/MAP_CONSTANTS';
 import axios from 'axios';
 
 /**
- * @hook - useRecipes - takes in a country argument and returns recipes of that country
+ * @hook - useResults - takes in a country argument and returns recipes of that country
  * @param {string} - country - name of country
  * @return {array} - array of recipe objects 
  */
-const useRecipes= (country)=>{
+const useResults= (country)=>{
     const [recipes,setRecipes]= useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
@@ -40,4 +40,4 @@ const useRecipes= (country)=>{
 
 }
 
-export default useRecipes;
+export default useResults;
