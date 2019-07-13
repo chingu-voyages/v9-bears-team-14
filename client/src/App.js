@@ -4,7 +4,7 @@ import Map from "./components/Map/Map";
 import Header from "./components/Header/Header";
 import Results from "./components/Results/Results";
 import CountryContext from "./context/country-context";
-import Preview from "./components/Preview/Preview";
+import DetailedRecipe from "./components/DetailedRecipe/DetailedRecipe";
 
 
 //set up react router
@@ -30,7 +30,7 @@ function App() {
     <Router>
       <Header />
       <Route exact path="/" component={Main} />
-      <Route path="/recipe/:previewSelected" component={Preview} />
+      <Route path="/recipe/:previewSelected" component={DetailedRecipe} />
     </Router>
   );
 }

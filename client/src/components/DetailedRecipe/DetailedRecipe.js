@@ -1,28 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Video from "../Video/Video";
+import HeroRecipe from './HeroRecipe/HeroRecipe';
 import ErrorMessage from "../Video/Message/ErrorMessage";
 import LoadMessage from "../Video/Message/LoadMessage";
 import Ingredients from '../Ingredients/Ingredients';
 import "../Video/_video.scss";
-import "./Preview.css";
+import "./DetailedRecipe.css";
 
 
-const HeroRecipe=(props)=>{
-  return(
-      <div
-        className="Preview__Header"
-        style={{
-          background: `linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.25)) ,url(${
-            props.recipe.strMealThumb
-          })`,
-          backgroundSize: "cover"
-        }}
-      >
-        {<h1 className="Preview--heading">{props.recipe.strMeal}</h1>}
-      </div>
-    )
-}
 
 
 const Preview = ({ clicked,match }) => {
@@ -30,6 +16,7 @@ const Preview = ({ clicked,match }) => {
   const [isError, setIsError] = useState(false);
   const [recipe, setRecipe] = useState(null);
   const [ingredients,setIngredients]=useState([]);
+  
   const convertYoutubeLink = link => {
     const YTREGEX = /watch\?v=/; //we need to convert the watch endpoint to embed endpoint to use iframe
     const embedYoutube = link.replace(YTREGEX, "embed/");
@@ -37,8 +24,7 @@ const Preview = ({ clicked,match }) => {
   };
 
   useEffect(() => {
-    // add when mounted
-    document.addEventListener("touchend", clicked);
+    document.addEventListener("touchend", clicked);     // add when mounted
     document.addEventListener("mousedown", clicked);
     return () => {                                      // cleanup function to be called when unmounted
       document.removeEventListener("mousedown", clicked);
@@ -61,7 +47,7 @@ const Preview = ({ clicked,match }) => {
   }
 
   useEffect(() => {
-    const fetchYTLink = async () => {
+    const fetchRecipe = async () => {
       setIsError(false);
       setIsLoading(true);
       try {
@@ -81,15 +67,15 @@ const Preview = ({ clicked,match }) => {
       }
       setIsLoading(false);
     };
-    fetchYTLink();
+    fetchRecipe();
   }, [match.params.previewSelected]);
 
   return (
-    <div className="Preview__Container">
+    <div className="DetailedRecipe__Container">
       {recipe && (<HeroRecipe recipe={recipe}/>)}
       { isError && <ErrorMessage/> }
         {isLoading? <LoadMessage/> : recipe && recipe.strYoutube !== "" ? <Video youtubeLink={convertYoutubeLink(recipe.strYoutube)}/> : <ErrorMessage/> }
-      <div className="Preview__Description">
+      <div className="DetailedRecipe__Description">
           <Ingredients ingredients={ingredients}/>
       </div> 
     </div>
