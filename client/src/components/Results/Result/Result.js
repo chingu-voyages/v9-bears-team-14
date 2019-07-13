@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import "./Result.css";
 
 const Result = ({meal}) => {
 
@@ -19,6 +19,7 @@ const Result = ({meal}) => {
         }
         return title;
     }
+
   return (
     <Link to={`/recipe/${meal.idMeal}`} key={meal.idMeal}>
       <div className="Results--card" id={meal.idMeal}>
