@@ -56,7 +56,7 @@
 
     .Instruction--Content{
       font-size: calc(.7rem + 16 * (100vw - 640px) / (1024 - 640) );
-      line-height: calc( 130% + 4.2 * (100vw - 2000px) / (1441 - 2000) );
+      line-height: calc( 140% + 4.2 * (100vw - 2000px) / (1441 - 2000) );
     }
 
   }
@@ -69,6 +69,6 @@
 
     .Instruction--Content{
       font-size: calc(.7rem + 16 * (100vw - 320px) / (500 - 320) );
-      line-height: calc( 130% + 4.2 * (100vw - 2000px) / (1441 - 2000) );
+      line-height: calc( 140% + 4.2 * (100vw - 2000px) / (1441 - 2000) );
     }
   }
