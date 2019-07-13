@@ -1,19 +1,19 @@
 .Video__Wrapper {
-    float: none;
-    clear: both;
-    width: 100%;
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 25px;
+    // float: none;
+    // clear: both;
+    // width: 100%;
+
+    // padding-bottom: 56.25%;
+    // padding-top: 25px;
+
     height: 0;
-    margin-left:auto; 
-    margin-right:auto;
+    margin:0 auto;
 }
 
 .Video__Wrapper iframe {
-    position: fixed;
-    top: 25vh;
-    left: 25vw;
+    position: absolute;
+    // top: 25vh;
+    left: 26vw;
     width: 60vw;
     height: 60vh;
     max-width:640px;

@@ -5,7 +5,6 @@ import Header from "./components/Header/Header";
 import Results from "./components/Results/Results";
 import CountryContext from "./context/country-context";
 import Preview from "./components/Preview/Preview";
-import Modal from "./components/Modal/Modal";
 import DetailedRecipe from './components/DetailedRecipe/DetailedRecipe';
 
 //set up react router
@@ -19,14 +18,14 @@ function Main(){
   const [previewSelected, setPreview] = useState(null);
   const videoEl = React.createRef();
 
-  const modalHandler = e => {
-    e.preventDefault();
-    if (videoEl.current.contains(e.target)) {
-      setModal(true); // outside click opens preview component
-      return;
-    }
-    setModal(false); // outside click closes preview component
-  };
+  // const modalHandler = e => {
+  //   e.preventDefault();
+  //   if (videoEl.current.contains(e.target)) {
+  //     setModal(true); // outside click opens preview component
+  //     return;
+  //   }
+  //   setModal(false); // outside click closes preview component
+  // };
 
   return (
     <CountryContext.Provider value={{ countrySelected, setSelectedCountry }}>
