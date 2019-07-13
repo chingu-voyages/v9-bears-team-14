@@ -1,7 +1,7 @@
 .Description__Ingredients{
     display: grid;
     grid-template-columns: 1fr;
-    margin-left:calc(30vmin);
+    margin-left:calc(30px + 20vmin);
 }
 
 .Ingredients__Header{

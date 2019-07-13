@@ -1,31 +1,14 @@
 import React, { useContext} from "react";
-import { Link } from "react-router-dom";
 import useResults from "../../hooks/useResults";
 import CountryContext from "../../context/country-context";
-import MAP_CONSTANTS from "../Map/MapConstants/MAP_CONSTANTS";
+import Result from './Result/Result';
 import LoadSpinner from '../LoadingSpinner/LoadSpinner';
+import MAP_CONSTANTS from "../Map/MapConstants/MAP_CONSTANTS";
 import "./_results.scss";
 
-const Results = (props) => {
+const Results = () => {
     const {countrySelected} = useContext(CountryContext)
     const [{recipes,isLoading,isError}] = useResults(countrySelected);
-
-     const limitRecipeTitle = (title, limit = 25) => {
-        const newTitle = [];
-        if (title.length > limit) {
-            title.split(' ').reduce((acc, cur) => {
-                if (acc + cur.length <= limit) {
-                    newTitle.push(cur);
-                }
-                return acc + cur.length;
-            }, 0);
-    
-            // return the result
-            return `${newTitle.join(' ')} ...`;
-        }
-        return title;
-    }
-    
     
     const renderRecipes = ()=>{
         return(    <React.Fragment>
@@ -33,17 +16,13 @@ const Results = (props) => {
                             {countrySelected.length > 0 &&<h1 className="Results--title">{MAP_CONSTANTS.supportedCountries[countrySelected]} Recipes</h1>}      
                         </div>  
                         <div className="Results--wrapper">
-                            {recipes.map((meal) => 
-                                <Link to={`/recipe/${meal.idMeal}`} key={meal.idMeal} ><div className="Results--card" id={meal.idMeal} >
-                                    <img className="Results--image"src={meal.strMealThumb} alt={meal.strMeal}/>
-                                    <div className="after"><h1  className="Results--card--title">{limitRecipeTitle(meal.strMeal)}</h1></div>
-                                </div></Link>
-                            )} 
+                            {recipes.map((meal) => <Result key={meal.idMeal} meal={meal}/>)} 
                         </div>
                     </React.Fragment>
-                    
                 );
     }
+
+
 return (
     <div className="Results--container">
         {isError && <div className="Results--error">Something went wrong ...</div>}
