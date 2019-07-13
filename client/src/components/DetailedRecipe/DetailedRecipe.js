@@ -11,7 +11,7 @@ import "./DetailedRecipe.css";
 
 
 
-const Preview = ({ clicked,match }) => {
+const Preview = ({ match }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   const [recipe, setRecipe] = useState(null);
@@ -22,16 +22,6 @@ const Preview = ({ clicked,match }) => {
     const embedYoutube = link.replace(YTREGEX, "embed/");
     return embedYoutube;
   };
-
-  useEffect(() => {
-    document.addEventListener("touchend", clicked);     // add when mounted
-    document.addEventListener("mousedown", clicked);
-    return () => {                                      // cleanup function to be called when unmounted
-      document.removeEventListener("mousedown", clicked);
-      document.removeEventListener("touchend", clicked);
-    };
-  }, [clicked]);
-
 
   const gatherIngredients=(recipe)=>{
     const ingredientList = []
@@ -45,6 +35,8 @@ const Preview = ({ clicked,match }) => {
     }
     return ingredientList;
   }
+
+
 
   useEffect(() => {
     const fetchRecipe = async () => {
