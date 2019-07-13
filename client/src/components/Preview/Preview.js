@@ -3,8 +3,11 @@ import axios from "axios";
 import Video from "../Video/Video";
 import ErrorMessage from "../Video/Message/ErrorMessage";
 import LoadMessage from "../Video/Message/LoadMessage";
+import Ingredients from '../Ingredients/Ingredients';
 import "../Video/_video.scss";
 import "./Preview.css";
+
+
 
 
 
@@ -29,35 +32,6 @@ const Preview = ({ clicked, previewSelected, match }) => {
     };
   }, [clicked]);
 
-  // "strMealThumb": "https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg",
-  //     "strTags": "Meat,Casserole",
-  //     "strYoutube": "https://www.youtube.com/watch?v=4aZr5hZXP_s",
-  //     "strIngredient1": "soy sauce",
-  //     "strIngredient2": "water",
-  //     "strIngredient3": "brown sugar",
-  //     "strIngredient4": "ground ginger",
-  //     "strIngredient5": "minced garlic",
-  //     "strIngredient6": "cornstarch",
-  //     "strIngredient7": "chicken breasts",
-  //     "strIngredient8": "stir-fry vegetables",
-  //     "strIngredient9": "brown rice",
-  //     "strIngredient10": "",
-  //     "strIngredient11": "",
-  //     "strIngredient12": "",
-  //     "strIngredient13": "",
-  //     "strIngredient14": "",
-  //     "strIngredient15": "",
-  //     "strIngredient16": null,
-  //     "strIngredient17": null,
-  //     "strIngredient18": null,
-  //     "strIngredient19": null,
-  //     "strIngredient20": null,
-  //     "strMeasure1": "3/4 cup",
-  //     "strMeasure2": "1/2 cup",
-  //     "strMeasure3": "1/4 cup",
-  //     "strMeasure4": "1/2 teaspoon",
-  //     "strMeasure5": "1/2 teaspoon",
-  //     "strMeasure6": "4 Tablespoons",
 
   const gatherIngredients=(recipe)=>{
     const ingredientList = []
@@ -116,11 +90,7 @@ const Preview = ({ clicked, previewSelected, match }) => {
       { isError && <ErrorMessage/> }
         {isLoading? <LoadMessage/> : recipe && recipe.strYoutube !== "" ? <Video youtubeLink={convertYoutubeLink(recipe.strYoutube)}/> : <ErrorMessage/> }
       <div className="Preview__Description">
-        <div className="Description__Ingredients">
-          <ul>
-          {ingredients.map((ing,i)=><li key={i}>{ing}</li>)}
-          </ul>
-        </div>
+          <Ingredients ingredients={ingredients}/>
       </div> 
     </div>
   );

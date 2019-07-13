@@ -25,12 +25,9 @@
 .Preview__Description{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    
 }
 
-.Description__Ingredients{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
 
 /*RESPONSIVE FONT BIG DESKTOP*/
 @media (min-width: 1441px) and (max-width: 2000px) {
@@ -39,6 +36,7 @@
       /* For a negative slope, we have to invert the breakpoints */
       line-height: calc( 120% + 4.2 * (100vw - 2000px) / (1441 - 2000) );
     }
+
 
   }
 
@@ -52,6 +50,8 @@
       line-height: calc( 120% + 4.2 * (100vw - 1440px) / (800 - 1400) );
     }
 
+
+
   }
 
 
@@ -63,6 +63,7 @@
       line-height: calc( 120% + 3.2 * (100vw - 1024px) / (640 - 1024) );
     }
 
+
   }
 
   /* RESPONSIVE FONT  MOBILE VERTICAL*/
@@ -72,5 +73,6 @@
       /* For a negative slope, we have to invert the breakpoints */
       line-height: calc( 120% + 3.2 * (100vw - 500px) / (320 - 500) );
     }
+
   
   }
