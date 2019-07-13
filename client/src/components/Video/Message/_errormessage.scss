@@ -1,4 +1,8 @@
 /*RESPONSIVE FONT DESKTOP*/
+.Message--Error{
+  color: #1d2129;
+  font-family: sans-serif;
+}
 @media (min-width: 800px) and (max-width: 1440px) {
     .Message--Error {
       font-size: calc( 3.5rem + 16 * (100vw - 800px) / (1440 - 800) );
