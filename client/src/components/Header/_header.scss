@@ -18,8 +18,6 @@
   color:rgb(50, 205, 50);
 }
 
-
-
 .Header--title {
   /* For a negative slope, we have to invert the breakpoints */
   line-height: calc( 120% + 4.2 * (100vw - 1440px) / (800 - 1400) );

@@ -28,20 +28,23 @@
                 fill: "#32CD32",                  //shade of green
                 stroke: "#607D8B",
                 strokeWidth: 1,
-                outline: "none"
+                outline: "none",
+                cursor:"pointer"
               },
               hover: {
                 fill: "#FF5722",
                 stroke: "#607D8B",
                 strokeWidth: 0.75,
-                outline: "none"
+                outline: "none",
+                cursor:"pointer"
               },
               pressed: {
                 fill: "#FF5722",
                 stroke: "#607D8B",
                 strokeWidth: 0.75,
                 outline: "none",
-                boxShadow:"0 0 10px #fff"
+                boxShadow:"0 0 10px #fff",
+                cursor:"pointer"
               }
         },
         notSupportedStyled:{
