@@ -1,0 +1,73 @@
+.Description__Ingredients{  
+  justify-self: center;
+}
+
+.Ingredients__Header{
+
+}
+
+.Ingredients--Heading{
+  font-weight:600;
+  margin-bottom:calc(2.5vmin);
+}
+
+.Ingredients__List{
+  list-style-type: none;
+  padding-left: 2em;
+}
+
+.Ingredient--Item{
+  margin-top:calc(2.5vmin);
+  margin-bottom:calc(2.5vmin);
+}
+
+/*RESPONSIVE FONT BIG DESKTOP*/
+@media (min-width: 1441px) and (max-width: 2000px) {
+    .Ingredients--Heading{
+      font-size: calc(1.5rem + 16 * (100vw - 1441px) / (2000 - 1441) );
+    }
+
+    .Ingredient--Item{
+      font-size: calc(.5rem + 16 * (100vw - 1441px) / (2000 - 1441) );
+      line-height: calc( 120% + 4.2 * (100vw - 2000px) / (1441 - 2000) );
+    }
+  }
+
+
+
+/*RESPONSIVE FONT DESKTOP*/
+  @media (min-width: 800px) and (max-width: 1440px) {
+    .Ingredients--Heading{
+      font-size: calc(1.5rem + 16 * (100vw -800px) / (1440 - 800) );
+    }
+
+    .Ingredient--Item{
+      font-size: calc(.5rem + 16 * (100vw - 800px) / (1440 - 800) );
+      line-height: calc( 120% + 4.2 * (100vw - 2000px) / (1441 - 2000) );
+    }
+
+  }
+
+
+/*RESPONSIVE FONT  MOBILE LANDSCAPE */
+  @media (min-width: 640px) and (max-width: 1024px) and (min-height:360px) and (max-height:768px) {
+    .Ingredients--Heading{
+      font-size: calc(1.5rem + 16 * (100vw -640px) / (1024 - 640) );
+    }
+
+    .Ingredient--Item{
+      font-size: calc(.5rem + 16 * (100vw - 640px) / (1024 - 640) );
+    }
+
+  }
+
+  /* RESPONSIVE FONT  MOBILE VERTICAL*/
+  @media (min-width: 320px) and (max-width: 500px) {
+    .Ingredients--Heading{
+      font-size: calc(1.5rem + 16 * (100vw -320px) / (500 - 320) );
+    }
+
+    .Ingredient--Item{
+      font-size: calc(.5rem + 16 * (100vw - 320px) / (500 - 320) );
+    }
+  }

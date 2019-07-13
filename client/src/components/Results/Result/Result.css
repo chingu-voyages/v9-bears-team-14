@@ -1,8 +1,6 @@
 /*DESKTOP SCREENS*/
 @media (min-width:800px){
 
-
-
     .Results--card {
         position:relative;
     }
@@ -41,8 +39,6 @@
 /*MOBILE SCREEN VERTICAL*/
 @media (max-width:500px) and (max-height:800px){
 
-
-
     .Results--card {
         position:relative;
         border-radius: 3px;
@@ -72,8 +68,6 @@
 
 /*LANDSCAPE MOBILE */
 @media (max-height:500px) and (max-width:800px){
-
-
 
     .Results--card {
         position:relative;
