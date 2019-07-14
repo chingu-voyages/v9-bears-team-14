@@ -1,7 +1,6 @@
 .DetailedRecipe__Container{
     display:grid;
     grid-template-columns: 1fr;
-    
 }
 
 

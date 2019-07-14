@@ -5,7 +5,7 @@ import Header from "./components/Header/Header";
 import Results from "./components/Results/Results";
 import CountryContext from "./context/country-context";
 import DetailedRecipe from "./components/DetailedRecipe/DetailedRecipe";
-
+import useSavedRecipes from './hooks/useSavedRecipes';
 
 //set up react router
 //set up auth route
@@ -14,7 +14,7 @@ import DetailedRecipe from "./components/DetailedRecipe/DetailedRecipe";
 
 function Main(){
   const [countrySelected, setSelectedCountry] = useState("");
-
+  const [{recipes,isLoading,isError}]=useSavedRecipes();
   return (
     <CountryContext.Provider value={{ countrySelected, setSelectedCountry }}>
       <div className="App">

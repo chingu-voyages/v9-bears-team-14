@@ -9,6 +9,7 @@ const Header = props => {
       <h2 className=" Header--subtitle">
         Explore the World's Cuisines
       </h2>
+      <a href="/auth/google">Login With Google</a>
     </header>
   );
 };

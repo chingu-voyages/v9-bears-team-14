@@ -39,6 +39,15 @@ const Preview = ({ match }) => {
     fetchRecipe();
   }, [match.params.previewSelected]);
 
+  const saveRecipe = async (recipe)=>{
+    try{
+      const response = await axios.post("/api/recipes",recipe);
+    }
+    catch(error){
+      console.log(error);
+    }
+  }
+
   return (
     <div className="DetailedRecipe__Container">
       {recipe && <HeroRecipe recipe={recipe} />}
@@ -53,6 +62,9 @@ const Preview = ({ match }) => {
       <div className="DetailedRecipe__Description">
         <Ingredients ingredients={ingredients} />
         <Instructions instructions={instructions}/>
+      </div>
+      <div>
+        <button onClick={()=>saveRecipe(recipe)}>SAVE RECIPE</button>
       </div>
     </div>
   );
