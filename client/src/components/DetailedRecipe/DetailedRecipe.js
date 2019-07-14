@@ -5,10 +5,11 @@ import HeroRecipe from "./HeroRecipe/HeroRecipe";
 import ErrorMessage from "../Video/Message/ErrorMessage";
 import LoadMessage from "../Video/Message/LoadMessage";
 import Ingredients from "./Ingredients/Ingredients";
+import Instructions from './Instructions/Instructions'
 import { convertYoutubeLink, gatherIngredients } from "../../utils/utils";
 import "../Video/_video.scss";
 import "./DetailedRecipe.css";
-import "./Instructions.css";
+
 const Preview = ({ match }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -51,14 +52,7 @@ const Preview = ({ match }) => {
       )}
       <div className="DetailedRecipe__Description">
         <Ingredients ingredients={ingredients} />
-        <div className="Description__Instructions">
-          <div className="Instructions__Header">
-            <h2 className="Instructions--Heading">Instructions</h2>
-          </div>
-          <div className="Instructions__Wrapper">
-            <p className="Instruction--Content">{instructions}</p>
-          </div>
-        </div>
+        <Instructions instructions={instructions}/>
       </div>
     </div>
   );
