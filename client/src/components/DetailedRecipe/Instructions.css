@@ -13,13 +13,21 @@
 
 /*RESPONSIVE FONT BIG DESKTOP*/
 @media (min-width: 1441px) and (max-width: 2000px) {
+
+    .Description__Instructions{
+        justify-self: center;
+        margin-right:calc(15px + 15vmin);
+        /* padding:calc(2.5vmin); */
+    }
+
     .Instructions--Heading{
       font-size: calc(1.5rem + 16 * (100vw - 1441px) / (2000 - 1441) );
     }
 
     .Instruction--Content{
       font-size: calc(.5rem + 16 * (100vw - 1441px) / (2000 - 1441) );
-      line-height: calc( 250% + 4.2 * (100vw - 2000px) / (1441 - 2000) );
+      /* line-height: calc( 250% + 4.2 * (100vw - 2000px) / (1441 - 2000) ); */
+      line-height: calc(1.3em + 1vw);       /*https://css-tricks.com/molten-leading-css/*/
     }
     .Instructions__Wrapper{
         column-count: 1;
@@ -27,24 +35,28 @@
         padding-left: 2em;
     }
 
-    .Description__Instructions{
-        justify-self: center;
-        margin-right:calc(15px + 15vmin);
-        padding:calc(2.5vmin);
-    }
+
   }
 
 
 
 /*RESPONSIVE FONT DESKTOP*/
   @media (min-width: 800px) and (max-width: 1440px) {
+
+    .Description__Instructions{
+        justify-self: center;
+        margin-right:calc(15px + 15vmin);
+        /* padding:calc(2.5vmin); */
+    }
+
     .Instructions--Heading{
       font-size: calc(1.5rem + 16 * (100vw -800px) / (1440 - 800) );
     }
 
     .Instruction--Content{
       font-size: calc(.5rem + 16 * (100vw - 800px) / (1440 - 800) );
-      line-height: calc( 250% + 4.2 * (100vw - 1440px) / (800 - 1440) );
+      /* line-height: calc( 250% + 4.2 * (100vw - 1440px) / (800 - 1440) ); */
+      line-height: calc(1.3em + 1vw);       /*https://css-tricks.com/molten-leading-css/*/
     }
 
     .Instructions__Wrapper{
@@ -53,11 +65,7 @@
         padding-left: 2em;
     }
 
-    .Description__Instructions{
-        justify-self: center;
-        margin-right:calc(15px + 15vmin);
-        padding:calc(2.5vmin);
-    }
+
 
   }
 
@@ -77,7 +85,8 @@
 
     .Instruction--Content{
       font-size: calc(.7rem + 16 * (100vw - 640px) / (1024 - 640) );
-      line-height: calc( 140% + 4.2 * (100vw - 1024px) / (640 - 1024) );
+      /* line-height: calc( 140% + 4.2 * (100vw - 1024px) / (640 - 1024) ); */
+      line-height: calc(1.3em + 1vw);                                       /*https://css-tricks.com/molten-leading-css/*/
     }
 
 
@@ -104,14 +113,13 @@
 
     .Instruction--Content{
       font-size: calc(.9rem + 16 * (100vw - 320px) / (500 - 320) );
-      /* line-height: calc( 200% + 3.2 * (100vw - 500px) / (320 - 500) ); */
-      line-height:13em;
+      /* line-height: calc( 200% + 3.2 * (100vw - 500px) / (320 - 500) ); */    
+      line-height: calc(1.3em + 1vw);                                                           /*https://css-tricks.com/molten-leading-css/*/
     }
 
      .Instructions--Heading{
         text-align: center;
     }
-
 
   }
 
