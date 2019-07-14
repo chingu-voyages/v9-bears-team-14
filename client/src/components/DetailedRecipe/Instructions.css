@@ -49,11 +49,11 @@
     }
 
     .Instructions--Heading{
-      font-size: calc(1.5rem + 16 * (100vw -800px) / (1440 - 800) );
+      font-size: calc(2.5rem + 16 * (100vw -800px) / (1440 - 800) );
     }
 
     .Instruction--Content{
-      font-size: calc(.5rem + 16 * (100vw - 800px) / (1440 - 800) );
+      font-size: calc(1.2rem + 16 * (100vw - 800px) / (1440 - 800) );
       /* line-height: calc( 250% + 4.2 * (100vw - 1440px) / (800 - 1440) ); */
       line-height: calc(1.3em + 1vw);       /*https://css-tricks.com/molten-leading-css/*/
     }
