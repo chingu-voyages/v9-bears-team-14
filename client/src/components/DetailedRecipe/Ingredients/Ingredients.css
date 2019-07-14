@@ -56,7 +56,7 @@
     }
 
     .Ingredient--Item{
-      font-size: calc(.7rem + 16 * (100vw - 640px) / (1024 - 640) );
+      font-size: calc(.9rem + 16 * (100vw - 640px) / (1024 - 640) );
     }
 
   }
@@ -68,6 +68,6 @@
     }
 
     .Ingredient--Item{
-      font-size: calc(.7rem + 16 * (100vw - 320px) / (500 - 320) );
+      font-size: calc(.9rem + 16 * (100vw - 320px) / (500 - 320) );
     }
   }
