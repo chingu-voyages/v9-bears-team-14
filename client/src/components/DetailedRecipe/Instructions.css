@@ -68,14 +68,18 @@
       font-size: calc(1.5rem + 16 * (100vw -640px) / (1024 - 640) );
     }
 
+    .Instructions__Wrapper{
+        column-count: 1;
+        column-width: 200px;
+        padding-left: 2em;
+        text-align: center;
+    }
+
     .Instruction--Content{
       font-size: calc(.7rem + 16 * (100vw - 640px) / (1024 - 640) );
       line-height: calc( 140% + 4.2 * (100vw - 1024px) / (640 - 1024) );
     }
 
-    .Instructions__Wrapper{
-        text-align: center;
-     }
 
      .Instructions--Heading{
         text-align: center;
@@ -90,18 +94,23 @@
       font-size: calc(1.5rem + 16 * (100vw -320px) / (500 - 320) );
     }
 
+    .Instructions__Wrapper{
+        column-count: 1;
+        column-width: 200px;
+        padding-left: 2em;
+        text-align: center;;
+    }
+     
+
     .Instruction--Content{
       font-size: calc(.9rem + 16 * (100vw - 320px) / (500 - 320) );
       line-height: calc( 200% + 3.2 * (100vw - 500px) / (320 - 500) );
     }
 
-    .Instructions__Wrapper{
-        text-align: center;
-     }
-
      .Instructions--Heading{
         text-align: center;
     }
-     
+
+
   }
 

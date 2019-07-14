@@ -1,5 +1,6 @@
 .Description__Ingredients{  
   justify-self: center;
+  margin-bottom:calc(4.5vmin);
 }
 
 .Ingredients__Header{
