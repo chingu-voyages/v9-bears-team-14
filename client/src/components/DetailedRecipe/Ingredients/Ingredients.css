@@ -3,9 +3,7 @@
   margin-bottom:calc(4.5vmin);
 }
 
-.Ingredients__Header{
 
-}
 
 .Ingredients--Heading{
   font-weight:600;
@@ -59,19 +57,6 @@
       }
     }
 
-
-/*RESPONSIVE FONT DESKTOP*/
-  /* @media (min-width: 800px) and (max-width: 1440px) {
-    .Ingredients--Heading{
-      font-size: calc(2.5rem + 16 * (100vw -800px) / (1440 - 800) );
-    }
-
-    .Ingredient--Item{
-      font-size: calc(1.2rem + 16 * (100vw - 800px) / (1440 - 800) );
-      line-height: calc( 120% + 4.2 * (100vw - 2000px) / (1441 - 2000) );
-    }
-
-  } */
 
 
 /*RESPONSIVE FONT  MOBILE LANDSCAPE */
