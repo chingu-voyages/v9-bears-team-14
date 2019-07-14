@@ -34,10 +34,34 @@
     }
   }
 
+  @media (min-width: 1000px) and (max-width: 1440px) {
+    .Ingredients--Heading{
+      font-size: calc(4.5rem + 16 * (100vw -1000px) / (1440 - 1000) );
+    }
+
+    .Ingredient--Item{
+      font-size: calc(1.2rem + 16 * (100vw - 1000px) / (1440 - 1000) );
+      /* line-height: calc( 120% + 4.2 * (100vw - 1440px) / (1000 - 2000) ); */
+      line-height: calc(1.3em + 1vw);
+    }
+  }
+
+    /*RESPONSIVE FONT DESKTOP*/
+    @media (min-width: 800px) and (max-width: 999px) {
+      .Ingredients--Heading{
+        font-size: calc(1.8rem + 16 * (100vw -800px) / (999 - 800) );
+      }
+  
+      .Ingredient--Item{
+        font-size: calc(1.2rem + 16 * (100vw - 800px) / (999 - 800) );
+        /* line-height: calc( 120% + 4.2 * (100vw - 2000px) / (1441 - 2000) ); */
+        line-height: calc(1.3em + 1vw);
+      }
+    }
 
 
 /*RESPONSIVE FONT DESKTOP*/
-  @media (min-width: 800px) and (max-width: 1440px) {
+  /* @media (min-width: 800px) and (max-width: 1440px) {
     .Ingredients--Heading{
       font-size: calc(2.5rem + 16 * (100vw -800px) / (1440 - 800) );
     }
@@ -47,7 +71,7 @@
       line-height: calc( 120% + 4.2 * (100vw - 2000px) / (1441 - 2000) );
     }
 
-  }
+  } */
 
 
 /*RESPONSIVE FONT  MOBILE LANDSCAPE */
