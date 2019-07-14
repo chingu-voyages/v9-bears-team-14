@@ -9,6 +9,10 @@
     margin-bottom:calc(2.5vmin);
 }
 
+.Instructions__Wrapper{
+   padding: calc(2.5vmin);
+}
+
 
 
 
@@ -86,8 +90,8 @@
 
     .Instruction--Content{
       font-size: calc(.9rem + 16 * (100vw - 320px) / (500 - 320) );
-      /* line-height: calc( 200% + 3.2 * (100vw - 500px) / (320 - 500) ); */
-        line-height: 1.5em;
+      line-height: calc( 200% + 3.2 * (100vw - 500px) / (320 - 500) );
+        
     }
   }
 
