@@ -77,6 +77,10 @@
         text-align: center;
      }
 
+     .Instructions--Heading{
+        text-align: center;
+    }
+
   }
 
 
@@ -94,6 +98,10 @@
     .Instructions__Wrapper{
         text-align: center;
      }
+
+     .Instructions--Heading{
+        text-align: center;
+    }
      
   }
 
