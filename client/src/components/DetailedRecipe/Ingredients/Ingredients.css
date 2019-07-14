@@ -60,6 +60,10 @@
       font-size: calc(.9rem + 16 * (100vw - 640px) / (1024 - 640) );
     }
 
+    .Ingredients__Header{
+      text-align: center;
+    }
+
   }
 
   /* RESPONSIVE FONT  MOBILE VERTICAL*/
@@ -70,5 +74,9 @@
 
     .Ingredient--Item{
       font-size: calc(.9rem + 16 * (100vw - 320px) / (500 - 320) );
+    }
+
+    .Ingredients__Header{
+      text-align: center;
     }
   }

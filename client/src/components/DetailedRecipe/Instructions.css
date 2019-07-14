@@ -19,7 +19,7 @@
 
     .Instruction--Content{
       font-size: calc(.5rem + 16 * (100vw - 1441px) / (2000 - 1441) );
-      line-height: calc( 150% + 4.2 * (100vw - 2000px) / (1441 - 2000) );
+      line-height: calc( 250% + 4.2 * (100vw - 2000px) / (1441 - 2000) );
     }
     .Instructions__Wrapper{
         column-count: 1;
@@ -44,7 +44,7 @@
 
     .Instruction--Content{
       font-size: calc(.5rem + 16 * (100vw - 800px) / (1440 - 800) );
-      line-height: calc( 150% + 4.2 * (100vw - 1440px) / (800 - 1440) );
+      line-height: calc( 250% + 4.2 * (100vw - 1440px) / (800 - 1440) );
     }
 
     .Instructions__Wrapper{
@@ -104,7 +104,8 @@
 
     .Instruction--Content{
       font-size: calc(.9rem + 16 * (100vw - 320px) / (500 - 320) );
-      line-height: calc( 200% + 3.2 * (100vw - 500px) / (320 - 500) );
+      /* line-height: calc( 200% + 3.2 * (100vw - 500px) / (320 - 500) ); */
+      line-height:13em;
     }
 
      .Instructions--Heading{
