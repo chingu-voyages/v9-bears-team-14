@@ -4,6 +4,7 @@ import Map from "./components/Map/Map";
 import Header from "./components/Header/Header";
 import Results from "./components/Results/Results";
 import CountryContext from "./context/country-context";
+import AuthContext from './context/auth-context';
 import DetailedRecipe from "./components/DetailedRecipe/DetailedRecipe";
 import useSavedRecipes from './hooks/useSavedRecipes';
 
@@ -26,11 +27,14 @@ function Main(){
   );
 }
 function App() {
+  const [auth,setAuth]=useState(false);
   return (
     <Router>
-      <Header />
-      <Route exact path="/" component={Main} />
-      <Route path="/recipe/:previewSelected" component={DetailedRecipe} />
+      <AuthContext.Provider value={{auth,setAuth}}>
+        <Header />
+        <Route exact path="/" component={Main} />
+        <Route path="/recipe/:previewSelected" component={DetailedRecipe} />
+      </AuthContext.Provider>
     </Router>
   );
 }

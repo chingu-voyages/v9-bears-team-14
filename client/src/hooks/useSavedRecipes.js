@@ -1,7 +1,6 @@
-import {useState,useEffect} from 'react';
-
+import {useState,useEffect,useContext} from 'react';
 import axios from 'axios';
-
+import AuthContext from '../context/auth-context';
 /**
  * @hook - useResults - takes in a country argument and returns recipes of that country
  * @param {string} - country - name of country
@@ -11,7 +10,7 @@ const useResults= ()=>{
     const [recipes,setRecipes]= useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
-    
+    const {auth,setAuth} = useContext(AuthContext)
 
     useEffect(
         ()=>{
@@ -20,9 +19,10 @@ const useResults= ()=>{
                setIsError(false);
                setIsLoading(true);
                try{
-                   
-                       const response = await axios.get(`/api/recipes`);
-                       setRecipes(response.data.meals);
+                   if(auth){
+                    const response = await axios.get(`/api/recipes`);
+                    setRecipes(response.data.meals);
+                   }
 
                }
                catch(error){
@@ -33,7 +33,7 @@ const useResults= ()=>{
 
            fetchRecipes();
        },
-       []     
+       [auth]     
    );
    //return recipes;
    return [{recipes,isLoading,isError}];
