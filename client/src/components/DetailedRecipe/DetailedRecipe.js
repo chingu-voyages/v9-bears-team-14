@@ -63,7 +63,7 @@ const Preview = ({ match }) => {
         <Ingredients ingredients={ingredients} />
         <Instructions instructions={instructions}/>
       </div>
-      <div>
+      <div className="DetailedRecipe--Button">
         <button onClick={()=>saveRecipe(recipe)}>SAVE RECIPE</button>
       </div>
     </div>

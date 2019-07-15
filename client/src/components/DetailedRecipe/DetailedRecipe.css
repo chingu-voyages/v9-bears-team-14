@@ -12,4 +12,11 @@
     
 }
 
+.DetailedRecipe--Button{
+    margin:calc(5vmin);
+}
 
+.DetailedRecipe--Button button{
+    padding:calc(5vmin);
+    border-radius:5px;
+}
