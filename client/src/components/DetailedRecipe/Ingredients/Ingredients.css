@@ -18,6 +18,21 @@
 .Ingredient--Item{
   margin-top:calc(2.5vmin);
   margin-bottom:calc(2.5vmin);
+  
+}
+
+/*RESPONSIVE FONT BIG DESKTOP*/
+@media (min-width: 1441px) and (max-width: 1600px) {
+
+  .Ingredients--Heading{
+    font-size: calc(3.5rem + 16 * (100vw - 1441px) / (1600 - 1441) );
+  }
+
+  .Ingredient--Item{
+    font-size: calc(1.5rem + 16 * (100vw - 1441px) / (1600 - 1441) );
+    line-height: calc( 120% + 4.2 * (100vw - 1600px) / (1441 - 1600) );
+  }
+
 }
 
 /*RESPONSIVE FONT BIG DESKTOP*/
