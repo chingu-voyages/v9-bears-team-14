@@ -4,9 +4,18 @@
     background: #ff5722;
     border-radius: 3px;
     box-shadow: 0 0 10px #4d0000;
-    margin-bottom: calc(5px + 5vmin);
+    // margin-bottom: calc(5px + 5vmin);
     text-align:left;
     padding: calc(1px + 1vmin);
+    text-decoration: none;
+}
+
+.Header--wrapper a {
+  text-decoration: none;
+}
+
+.Header--title:hover{
+  color:rgb(50, 205, 50);
 }
 
 .Header--title {
@@ -20,6 +29,9 @@
 
 .Header--subtitle{
   text-align: right;
+  background: #ff5722;
+  color: #910000;
+  text-shadow: 1px 1px 3px #000;
 }
 
 /*DESKTOP SCREENS*/

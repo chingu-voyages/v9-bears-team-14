@@ -1,24 +1,14 @@
-import React, { useContext, useState } from "react";
-import useRecipes from "../../hooks/useRecipes";
+import React, { useContext} from "react";
+import useResults from "../../hooks/useResults";
 import CountryContext from "../../context/country-context";
-import MAP_CONSTANTS from "../Map/MapConstants/MAP_CONSTANTS";
+import Result from './Result/Result';
 import LoadSpinner from '../LoadingSpinner/LoadSpinner';
-import Recipe from '../Recipe/Recipe'
+import MAP_CONSTANTS from "../Map/MapConstants/MAP_CONSTANTS";
 import "./_results.scss";
 
-const Results = (props) => {
+const Results = () => {
     const {countrySelected} = useContext(CountryContext)
-    const [{recipes,isLoading,isError}] = useRecipes(countrySelected);
-    const [recipeId, setRecipeId] = useState(-1)
-
-    const display = (id) => {
-        displayPreview(id)
-        setRecipeId(id)
-    }
-    const displayPreview =(id)=>{
-        props.clickedModal(prevState=>!prevState)
-        props.clickedPreview(id);
-    }
+    const [{recipes,isLoading,isError}] = useResults(countrySelected);
     
     const renderRecipes = ()=>{
         return(    <React.Fragment>
@@ -26,18 +16,13 @@ const Results = (props) => {
                             {countrySelected.length > 0 &&<h1 className="Results--title">{MAP_CONSTANTS.supportedCountries[countrySelected]} Recipes</h1>}      
                         </div>  
                         <div className="Results--wrapper">
-                            {recipes.map((meal) => 
-                                <div key={meal.idMeal} className="Results--card" id={meal.idMeal} onClick={()=>display(meal.idMeal)}>
-                                    <img className="Results--image"src={meal.strMealThumb} alt={meal.strMeal}/>
-                                    <div className="after"><h1  className="Results--card--title">{meal.strMeal}</h1></div>
-                                </div>
-                            )} 
+                            {recipes.map((meal) => <Result key={meal.idMeal} meal={meal}/>)} 
                         </div>
-                        {recipeId > 0 && <Recipe recipeId={recipeId}/>}
                     </React.Fragment>
-                    
                 );
     }
+
+
 return (
     <div className="Results--container">
         {isError && <div className="Results--error">Something went wrong ...</div>}
