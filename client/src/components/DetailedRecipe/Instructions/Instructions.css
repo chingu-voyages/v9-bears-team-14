@@ -25,7 +25,7 @@
     }
 
     .Instruction--Content{
-      font-size: calc(2.5rem + 16 * (100vw - 1441px) / (1600 - 1441) );
+      font-size: calc(2rem + 16 * (100vw - 1441px) / (1600 - 1441) );
       /* line-height: calc( 250% + 4.2 * (100vw - 2000px) / (1441 - 2000) ); */
       line-height: calc(1.3em + 1vw);       /*https://css-tricks.com/molten-leading-css/*/
     }
