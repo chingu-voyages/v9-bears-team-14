@@ -41,7 +41,7 @@ const Preview = ({ match }) => {
 
   const saveRecipe = async (recipe)=>{
     try{
-      const response = await axios.post("/api/recipes",recipe);
+       await axios.post("/api/recipes",recipe);
     }
     catch(error){
       console.log(error);
@@ -61,11 +61,11 @@ const Preview = ({ match }) => {
       )}
       <div className="DetailedRecipe__Description">
         <Ingredients ingredients={ingredients} />
-        <Instructions instructions={instructions}/>
+        <Instructions instructions={instructions} saveHandler={()=>saveRecipe(recipe)}/>
       </div>
-      <div className="DetailedRecipe--Button">
+      {/* <div className="DetailedRecipe--Button">
         <button onClick={()=>saveRecipe(recipe)}>SAVE RECIPE</button>
-      </div>
+      </div> */}
     </div>
   );
 };

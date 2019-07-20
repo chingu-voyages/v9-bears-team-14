@@ -19,4 +19,13 @@
 .DetailedRecipe--Button button{
     padding:calc(5vmin);
     border-radius:5px;
+    background-color: #0079D3;
+    color:white;
+    letter-spacing: .3rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-out;
+}
+
+.DetailedRecipe--Button button:hover{
+    transform: translateY(-5px);           /*open*/
 }
