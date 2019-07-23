@@ -6,8 +6,8 @@ import Results from "./components/Results/Results";
 import CountryContext from "./context/country-context";
 import AuthContext from './context/auth-context';
 import DetailedRecipe from "./components/DetailedRecipe/DetailedRecipe";
-import useSavedRecipes from './hooks/useSavedRecipes';
 import SideDrawer from './components/SideDrawer/SideDrawer';
+import SavedRecipes from './components/SavedRecipes/SavedRecipes';
 //set up react router
 //set up auth route
 //set up param route
@@ -15,14 +15,12 @@ import SideDrawer from './components/SideDrawer/SideDrawer';
 
 function Main(){
   const [countrySelected, setSelectedCountry] = useState("");
-  const [{recipes,isLoading,isError}]=useSavedRecipes();
   
   return (
     <CountryContext.Provider value={{ countrySelected, setSelectedCountry }}>
       <div className="App">
         <Map />
-        <Results 
-        />
+        <Results/>
       </div>
     </CountryContext.Provider>
   );
@@ -48,6 +46,7 @@ function App() {
         <SideDrawer auth ={auth} show={openDrawer} drawerHandler={handleClick} ref={drawerRef}/>
         <Route exact path="/" component={Main} />
         <Route path="/recipe/:previewSelected" component={DetailedRecipe} />
+        <Route path="/savedRecipes" component={SavedRecipes} />
       </AuthContext.Provider>
     </Router>
   );

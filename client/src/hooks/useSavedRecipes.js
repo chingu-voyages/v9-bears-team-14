@@ -6,7 +6,7 @@ import AuthContext from '../context/auth-context';
  * @param {string} - country - name of country
  * @return {array} - array of recipe objects 
  */
-const useResults= ()=>{
+const useSavedRecipes= ()=>{
     const [recipes,setRecipes]= useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
@@ -40,4 +40,4 @@ const useResults= ()=>{
 
 }
 
-export default useResults;
+export default useSavedRecipes;

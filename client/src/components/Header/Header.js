@@ -22,7 +22,7 @@ const Header = props => {
         setAuth(false);
       }
     })()
-  },[])
+  },[auth])
   
 
   return (

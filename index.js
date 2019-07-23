@@ -6,13 +6,7 @@ const keys = require('./config/keys')
 require('./models/User')
 require('./services/passport')
 
-mongoose.connect(keys.mongoURI, {useNewUrlParser: true})
-    .then(() => {
-        console.log("Connected to database")
-    }).catch((err) => {
-        console.log("Not connected to database Error: ", err)
-    })
-
+mongoose.connect(keys.mongoURI, {useNewUrlParser: true});
 const app = express();
 app.use(express.json());  
 

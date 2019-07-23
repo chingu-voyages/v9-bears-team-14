@@ -10,8 +10,8 @@ const Instructions =(props)=>{
             <p className="Instruction--Content">{props.instructions}</p>
           </div>
           <div className="DetailedRecipe--Button">
-            <button onClick={props.savedHandler}>SAVE RECIPE</button>
-          </div>
+          <button onClick={props.savedHandler}>SAVE RECIPE</button>
+        </div>
         </div>
     )
 }

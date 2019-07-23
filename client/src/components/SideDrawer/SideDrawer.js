@@ -17,13 +17,13 @@ const SideDrawer =React.forwardRef((props,ref)=>{
           document.removeEventListener("mousedown", props.drawerHandler);
           document.removeEventListener("touch", props.drawerHandler);
         };
-      }, []);
+      }, [props.drawerHandler]);
     return(
         <nav className={drawerClasses} ref={ref}>
             <ul>
                 <li><Link to="/">Home</Link></li>
                 <li>{props.auth ? <a href="/api/logout">Logout</a>: <a href="/auth/google">Login With Google</a>}</li>
-                <li><Link to="/results">Results</Link></li>
+                <li><Link to="/savedrecipes">Saved Recipes</Link></li>
             </ul>
         </nav>
     )

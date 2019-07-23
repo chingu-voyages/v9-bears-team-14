@@ -26,7 +26,7 @@ module.exports=app=>{
         await recipe.save();
         res.send(recipe)
     }
-    app.post('/api/recipes', async(req, res) => {
+    app.post('/api/recipe', async(req, res) => {
             console.log(req);
             try {
                 await createRecipe(req,res)
