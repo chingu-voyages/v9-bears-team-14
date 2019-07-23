@@ -15,23 +15,25 @@ module.exports=app=>{
     })
     //Create new recipe in database
     const createRecipe = async(req, res) => {
-        const {idMeal,strMeal,strArea} = req.body
+        const {idMeal,strMeal,strArea,strMealThumb} = req.body
         
         const recipe = await new Recipe({
             idMeal: idMeal,
             strMeal: strMeal,
             strArea: strArea,
-            _user: req.user.id
+            _user: req.user.id,
+            strMealThumb:strMealThumb
         });
         await recipe.save();
         res.send(recipe)
     }
     app.post('/api/recipe', async(req, res) => {
-            console.log(req);
+            
             try {
                 await createRecipe(req,res)
                 
             } catch(error) {
+                console.log(error);
                 res.status(400).send(error)
             }
     })  

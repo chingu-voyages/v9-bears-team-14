@@ -10,7 +10,7 @@ const useSavedRecipes= ()=>{
     const [recipes,setRecipes]= useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
-    const {auth,setAuth} = useContext(AuthContext)
+    const {auth} = useContext(AuthContext)
 
     useEffect(
         ()=>{
@@ -21,7 +21,7 @@ const useSavedRecipes= ()=>{
                try{
                    if(auth){
                     const response = await axios.get(`/api/recipes`);
-                    setRecipes(response.data.meals);
+                    setRecipes(response);
                    }
 
                }
