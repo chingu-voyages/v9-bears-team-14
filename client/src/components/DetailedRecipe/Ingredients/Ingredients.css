@@ -18,19 +18,23 @@
 .Ingredient--Item{
   margin-top:calc(2.5vmin);
   margin-bottom:calc(2.5vmin);
+  
 }
 
 /*RESPONSIVE FONT BIG DESKTOP*/
-@media (min-width: 1441px) and (max-width: 2000px) {
-    .Ingredients--Heading{
-      font-size: calc(2.5rem + 16 * (100vw - 1441px) / (2000 - 1441) );
-    }
+@media (min-width: 1441px) and (max-width: 1600px) {
 
-    .Ingredient--Item{
-      font-size: calc(1.2rem + 16 * (100vw - 1441px) / (2000 - 1441) );
-      line-height: calc( 120% + 4.2 * (100vw - 2000px) / (1441 - 2000) );
-    }
+  .Ingredients--Heading{
+    font-size: calc(3.5rem + 16 * (100vw - 1441px) / (1600 - 1441) );
   }
+
+  .Ingredient--Item{
+    font-size: calc(1.5rem + 16 * (100vw - 1441px) / (1600 - 1441) );
+    line-height: calc( 120% + 4.2 * (100vw - 1600px) / (1441 - 1600) );
+  }
+
+}
+
 
   @media (min-width: 1000px) and (max-width: 1440px) {
     .Ingredients--Heading{

@@ -10,5 +10,7 @@ const userSchema = new mongoose.Schema({
     }
 })
 
+mongoose.model('users',userSchema); //mongoose checks if users schema already exists
 
-mongoose.model('users', userSchema)
+
+

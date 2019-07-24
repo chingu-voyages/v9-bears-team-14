@@ -1,7 +1,42 @@
-const axios = require('axios');     //http client
-module.exports=app=>{
+const axios = require('axios');//http client
+const recipeSchema =require('../models/Recipe');
+const mongoose= require('mongoose');
+const Recipe = mongoose.model('recipes',recipeSchema);
 
-    
+module.exports=app=>{
+    //Read all recipes in database
+    app.get('/api/recipes', async(req, res) => {
+        try {
+        const recipes = await Recipe.find({_user:req.user.id})
+        res.send(recipes)
+        } catch(e) {
+            res.status(500).send()
+        } 
+    })
+    //Create new recipe in database
+    const createRecipe = async(req, res) => {
+        const {idMeal,strMeal,strArea,strMealThumb} = req.body
+        
+        const recipe = await new Recipe({
+            idMeal: idMeal,
+            strMeal: strMeal,
+            strArea: strArea,
+            _user: req.user.id,
+            strMealThumb:strMealThumb
+        });
+        await recipe.save();
+        res.send(recipe)
+    }
+    app.post('/api/recipe', async(req, res) => {
+            
+            try {
+                await createRecipe(req,res)
+                
+            } catch(error) {
+                console.log(error);
+                res.status(400).send(error)
+            }
+    })  
     /**
      * @function - this is a route that handles GET requests for a country's recipes, takes in a country name params
      * @return {array} - sends an array of recipe objects {strMeal: "Beef lo Mein", strMealThumb: "https://www.themealdb.com/images/media/meals/1529444830.jpg","idMeal":"52952"}

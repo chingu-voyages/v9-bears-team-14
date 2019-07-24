@@ -6,13 +6,7 @@ const keys = require('./config/keys')
 require('./models/User')
 require('./services/passport')
 
-mongoose.connect(keys.mongoURI, {useNewUrlParser: true})
-    .then(() => {
-        console.log("Connected to database")
-    }).catch((err) => {
-        console.log("Not connected to database Error: ", err)
-    })
-
+mongoose.connect(keys.mongoURI, {useNewUrlParser: true});
 const app = express();
 app.use(express.json());  
 
@@ -28,7 +22,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 require('./routes/authRoutes')(app)
-
+require('./routes/recipeRoutes')(app);
 if(process.env.NODE_ENV === 'production'){
 
     //express will serve up our production assets

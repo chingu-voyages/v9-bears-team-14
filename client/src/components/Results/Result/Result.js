@@ -21,7 +21,7 @@ const Result = ({meal}) => {
     }
 
   return (
-    <Link to={`/recipe/${meal.idMeal}`} key={meal.idMeal}>
+    
       <div className="Results--card" id={meal.idMeal}>
         <img
           className="Results--image"
@@ -30,11 +30,11 @@ const Result = ({meal}) => {
         />
         <div className="after">
           <h1 className="Results--card--title">
-            {limitRecipeTitle(meal.strMeal)}
+          <Link to={`/recipe/${meal.idMeal}`} key={meal.idMeal}>{limitRecipeTitle(meal.strMeal)}</Link>
           </h1>
         </div>
-      </div>
-    </Link>
+      </div >
+    
   );
 };
 

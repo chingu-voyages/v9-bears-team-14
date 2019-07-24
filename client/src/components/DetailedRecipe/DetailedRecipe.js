@@ -5,7 +5,7 @@ import HeroRecipe from "./HeroRecipe/HeroRecipe";
 import ErrorMessage from "../Video/Message/ErrorMessage";
 import LoadMessage from "../Video/Message/LoadMessage";
 import Ingredients from "./Ingredients/Ingredients";
-import Instructions from './Instructions/Instructions'
+import Instructions from "./Instructions/Instructions";
 import { convertYoutubeLink, gatherIngredients } from "../../utils/utils";
 import "../Video/_video.scss";
 import "./DetailedRecipe.css";
@@ -39,6 +39,15 @@ const Preview = ({ match }) => {
     fetchRecipe();
   }, [match.params.previewSelected]);
 
+  const saveRecipe = async recipe => {
+    console.log("savedRecipe ran");
+    try {
+      await axios.post("/api/recipe", recipe);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="DetailedRecipe__Container">
       {recipe && <HeroRecipe recipe={recipe} />}
@@ -52,7 +61,7 @@ const Preview = ({ match }) => {
       )}
       <div className="DetailedRecipe__Description">
         <Ingredients ingredients={ingredients} />
-        <Instructions instructions={instructions}/>
+        <Instructions instructions={instructions} savedHandler={() => saveRecipe(recipe)}/>
       </div>
     </div>
   );
