@@ -1,17 +1,16 @@
 import React,{useContext,useEffect} from "react";
+import {useSpring, animated} from 'react-spring'
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import AuthContext from '../../context/auth-context';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
 const Header = props => {
-  const {auth,setAuth}=useContext(AuthContext);
+  const {setAuth}=useContext(AuthContext);
 
   useEffect(()=>{
     (async ()=>{
       try{
         const res = await axios.get('/api/current_user');
-        console.log('fetching user');
-        console.log(res);
         if(res.data){
           setAuth(true);
         }
@@ -22,11 +21,11 @@ const Header = props => {
         setAuth(false);
       }
     })()
-  },[auth])
+  },)
   
-
+  const anims = useSpring({opacity: 1, from: {opacity: 0}})
   return (
-    <header className="Header--wrapper">
+    <animated.header style={anims} className="Header--wrapper">
       <Link to="/">
         <h1 className="Header--title">Geo Foods</h1>
       </Link>
@@ -36,7 +35,7 @@ const Header = props => {
       <div className="Header--Button">
         <DrawerToggleButton  clicked={props.clicked} open={props.open}/>
       </div>
-    </header>
+    </animated.header>
   );
 };
 

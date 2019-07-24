@@ -1,5 +1,5 @@
 import React, { useState,useRef } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route,Redirect } from "react-router-dom";
 import Map from "./components/Map/Map";
 import Header from "./components/Header/Header";
 import Results from "./components/Results/Results";
@@ -12,6 +12,7 @@ import SavedRecipes from './components/SavedRecipes/SavedRecipes';
 //set up auth route
 //set up param route
 //put links in header
+
 
 function Main(){
   const [countrySelected, setSelectedCountry] = useState("");
@@ -46,7 +47,8 @@ function App() {
         <SideDrawer auth ={auth} show={openDrawer} drawerHandler={handleClick} ref={drawerRef}/>
         <Route exact path="/" component={Main} />
         <Route path="/recipe/:previewSelected" component={DetailedRecipe} />
-        <Route path="/savedRecipes" component={SavedRecipes} />
+        {/* <Route path="/savedRecipes" component={SavedRecipes} /> */}
+        <Route path="/savedRecipes" render={()=>(!auth?<Redirect to={'/'}/>:<SavedRecipes/>)}></Route>
       </AuthContext.Provider>
     </Router>
   );

@@ -24,8 +24,7 @@ const SavedRecipes = props => {
       </div>
       <div className="SavedRecipes__Favorites">
         {isError && <div className="SavedRecipes--error">Something went wrong ...</div>}
-        {isLoading? <LoadSpinner color={"black"} message={"Loading your results"}/> : recipes.data && recipes.data.length?recipes.data.map(meal=><Result meal={meal}/>):null}
-        {recipes && console.log(recipes)}
+        {isLoading? <LoadSpinner color={"black"} message={"Loading your results"}/> : recipes.data && recipes.data.length?recipes.data.map(meal=><Result meal={meal} key={meal.idMeal}/>):null}
       </div>
     </div>
   );
