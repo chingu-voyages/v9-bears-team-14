@@ -47,7 +47,6 @@ function App() {
         <SideDrawer auth ={auth} show={openDrawer} drawerHandler={handleClick} ref={drawerRef}/>
         <Route exact path="/" component={Main} />
         <Route path="/recipe/:previewSelected" component={DetailedRecipe} />
-        {/* <Route path="/savedRecipes" component={SavedRecipes} /> */}
         <Route path="/savedRecipes" render={()=>(!auth?<Redirect to={'/'}/>:<SavedRecipes/>)}></Route>
       </AuthContext.Provider>
     </Router>

@@ -28,7 +28,6 @@ const useResults= (country)=>{
                }
                catch(error){
                 if (axios.isCancel(error)) {
-                    console.log("cancelled");
                   } else {
                     throw error;
                   }

@@ -12,14 +12,6 @@ const Results = () => {
     const [{recipes,isLoading,isError}] = useResults(countrySelected);
 
 
-
-//       {trail.map(({...rest},index) => 
-//       <animated.div key={recipes[index].idMeal} className="Results--card" style={rest} onClick={()=>displayPreview(recipes[index].idMeal)}>
-//           <img className="Results--image"src={recipes[index].strMealThumb} alt={recipes[index].strMeal} />
-//           <div className="after"><h1  className="Results--card--title">{recipes[index].strMeal}</h1></div>
-//       </animated.div>
-//   )} 
-
     const renderRecipes = ()=>{
 
 
@@ -29,8 +21,6 @@ const Results = () => {
                         </div>  
                         <div className="Results--wrapper">
                             {recipes.map((meal) => <Result key={meal.idMeal} meal={meal}/>)} 
-                            {/* {trail.map(({...rest},index)=> 
-                                <AnimatedResult style={rest} key={recipes[index].idMeal} meal={recipes[index]}/>)} */}
                         </div>
                     </React.Fragment>
                 );
