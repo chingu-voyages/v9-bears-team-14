@@ -1,0 +1,95 @@
+.Description__Ingredients{  
+  justify-self: center;
+  margin-bottom:calc(4.5vmin);
+}
+
+
+
+.Ingredients--Heading{
+  font-weight:600;
+  margin-bottom:calc(2.5vmin);
+}
+
+.Ingredients__List{
+  list-style-type: none;
+  padding-left: 2em;
+}
+
+.Ingredient--Item{
+  margin-top:calc(2.5vmin);
+  margin-bottom:calc(2.5vmin);
+  
+}
+
+/*RESPONSIVE FONT BIG DESKTOP*/
+@media (min-width: 1441px) and (max-width: 1600px) {
+
+  .Ingredients--Heading{
+    font-size: calc(3.5rem + 16 * (100vw - 1441px) / (1600 - 1441) );
+  }
+
+  .Ingredient--Item{
+    font-size: calc(1.5rem + 16 * (100vw - 1441px) / (1600 - 1441) );
+    line-height: calc( 120% + 4.2 * (100vw - 1600px) / (1441 - 1600) );
+  }
+
+}
+
+
+  @media (min-width: 1000px) and (max-width: 1440px) {
+    .Ingredients--Heading{
+      font-size: calc(4.5rem + 16 * (100vw -1000px) / (1440 - 1000) );
+    }
+
+    .Ingredient--Item{
+      font-size: calc(1.2rem + 16 * (100vw - 1000px) / (1440 - 1000) );
+      /* line-height: calc( 120% + 4.2 * (100vw - 1440px) / (1000 - 2000) ); */
+      line-height: calc(1.3em + 1vw);
+    }
+  }
+
+    /*RESPONSIVE FONT DESKTOP*/
+    @media (min-width: 800px) and (max-width: 999px) {
+      .Ingredients--Heading{
+        font-size: calc(1.8rem + 16 * (100vw -800px) / (999 - 800) );
+      }
+  
+      .Ingredient--Item{
+        font-size: calc(1.2rem + 16 * (100vw - 800px) / (999 - 800) );
+        /* line-height: calc( 120% + 4.2 * (100vw - 2000px) / (1441 - 2000) ); */
+        line-height: calc(1.3em + 1vw);
+      }
+    }
+
+
+
+/*RESPONSIVE FONT  MOBILE LANDSCAPE */
+  @media (min-width: 640px) and (max-width: 1024px) and (min-height:360px) and (max-height:768px) {
+    .Ingredients--Heading{
+      font-size: calc(1.5rem + 16 * (100vw -640px) / (1024 - 640) );
+    }
+
+    .Ingredient--Item{
+      font-size: calc(.9rem + 16 * (100vw - 640px) / (1024 - 640) );
+    }
+
+    .Ingredients__Header{
+      text-align: center;
+    }
+
+  }
+
+  /* RESPONSIVE FONT  MOBILE VERTICAL*/
+  @media (min-width: 320px) and (max-width: 500px) {
+    .Ingredients--Heading{
+      font-size: calc(1.5rem + 16 * (100vw -320px) / (500 - 320) );
+    }
+
+    .Ingredient--Item{
+      font-size: calc(.9rem + 16 * (100vw - 320px) / (500 - 320) );
+    }
+
+    .Ingredients__Header{
+      text-align: center;
+    }
+  }
