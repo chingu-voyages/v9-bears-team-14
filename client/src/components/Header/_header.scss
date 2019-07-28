@@ -1,52 +1,67 @@
 
 /*DEFAULT VALUES*/
 .Header--wrapper{
-    background: #ff5722;
+    background: white;
     border-radius: 3px;
     box-shadow: 0 0 10px #4d0000;
-    // margin-bottom: calc(5px + 5vmin);
     text-align:left;
-    padding: calc(1px + 1vmin);
+    padding-top: calc(3px + 2vmin);
+    padding-bottom: calc(2px + 2vmin);
     text-decoration: none;
+}
+
+.Heading__main{
+  display:flex;
+}
+
+.Heading__title{
+  padding-left:calc(3px + 2vmin);
+}
+
+.Heading__title:hover{
+  color:rgb(50, 205, 50);
 }
 
 .Header--wrapper a {
   text-decoration: none;
 }
 
+.Header--title {
+  color: #d32323;
+  letter-spacing: 1rem;
+  margin: calc(2px + 1vmin);
+  margin-left: calc(3px + 3vmin);
+  font-family: 'Cantarell', sans-serif;
+}
+
 .Header--title:hover{
   color:rgb(50, 205, 50);
 }
 
-.Header--title {
-  /* For a negative slope, we have to invert the breakpoints */
-  line-height: calc( 120% + 4.2 * (100vw - 1440px) / (800 - 1400) );
-  color: #910000;
-  letter-spacing: .9rem;
-  margin: calc(2px + 1vmin);
-  padding-left: calc(5px + 5vmin);
-}
-
 .Header--subtitle{
   text-align: right;
-  background: #ff5722;
-  color: #910000;
+  color: #d32323;
   text-shadow: 1px 1px 3px #000;
   padding-right: calc(5px + 5vmin);
+  font-family: 'Cantarell', sans-serif;
+  letter-spacing: .5rem;
 }
 
 .Header--Button{
   padding-left:calc(3vmin);
   padding-bottom:calc(3vmin);
+  display:flex;
+  align-items: center;
+  margin-right:calc(3px + 2vmin);
 }
 
 /*DESKTOP SCREENS*/
 @media (min-width:800px){
   .Header--title {
-    color: #910000;
-    letter-spacing: .9rem;
+    color: #d32323;
+    letter-spacing: 1rem;
     margin: calc(2px + 1vmin);
-    padding-left: calc(5px + 5vmin);
+    padding-left: calc(6px + 3vmin);
     text-shadow: 1px 1px 3px #000;
   }
 }
@@ -54,10 +69,10 @@
   /*MOBILE SCREENS*/
   @media (min-width: 320px) and (max-width: 500px) {
     .Header--title{
-      color: #910000;
-      letter-spacing: .9rem;
+      color: #d32323;
+      letter-spacing: 1rem;
       margin: calc(2px + 1vmin);
-      padding-left: calc(5px + 5vmin);
+      padding-left: calc(3px + 5vmin);
     }
   }
 
@@ -93,7 +108,7 @@
 /*DESKTOP RESPONSIVE FONTS*/
 @media (min-width: 800px) and (max-width: 1440px) {
     .Header--title {
-      font-size: calc( 3.5rem + 16 * (100vw - 800px) / (1440 - 800) );
+      font-size: calc( 4.5rem + 16 * (100vw - 800px) / (1440 - 800) );
       /* For a negative slope, we have to invert the breakpoints */
       line-height: calc( 120% + 4.2 * (100vw - 1440px) / (800 - 1400) );
     }

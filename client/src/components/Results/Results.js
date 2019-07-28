@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
 import useResults from "../../hooks/useResults";
 import CountryContext from "../../context/country-context";
-//import Result from "./Result/Result";
 import LoadSpinner from "../LoadingSpinner/LoadSpinner";
 import MAP_CONSTANTS from "../Map/MapConstants/MAP_CONSTANTS";
 import ResultCards from './ResultCards';
-import "./Result/Result.css";
+import "./ResultCards.css";
 import "./_results.scss";
 
 const Results = () => {
@@ -14,7 +13,6 @@ const Results = () => {
 
 
   const renderRecipes = () => {
-      
     return (
       <React.Fragment>
         <div className="Results--Header--title">

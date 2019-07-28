@@ -1,7 +1,7 @@
-import React from "react";
+import React  from "react";
 import useSavedRecipes from "../../hooks/useSavedRecipes";
 import LoadSpinner from '../LoadingSpinner/LoadSpinner';
-import Result from '../Results/Result/Result';
+import ResultCards from '../Results/ResultCards';
 import "./SavedRecipes.css";
 
 // const recipe = await new Recipe({
@@ -14,9 +14,10 @@ import "./SavedRecipes.css";
 
 
 
-const SavedRecipes = props => {
+const SavedRecipes = () => {
+  
   const [{ recipes, isLoading, isError }] = useSavedRecipes();
-
+  
   return (
     <div className="SavedRecipes__Wrapper">
       <div className="SavedRecipes__Header">
@@ -24,7 +25,7 @@ const SavedRecipes = props => {
       </div>
       <div className="SavedRecipes__Favorites">
         {isError && <div className="SavedRecipes--error">Something went wrong ...</div>}
-        {isLoading? <LoadSpinner color={"black"} message={"Loading your results"}/> : recipes.data && recipes.data.length?recipes.data.map(meal=><Result meal={meal} key={meal.idMeal}/>):null}
+        {isLoading? <LoadSpinner color={"black"} message={"Loading your results"}/> : recipes.data && recipes.data.length?<ResultCards recipes={recipes.data}/>:null}
       </div>
     </div>
   );

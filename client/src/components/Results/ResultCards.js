@@ -2,7 +2,8 @@ import React from "react";
 import { useTrail, animated} from "react-spring";
 import { Link } from "react-router-dom";
 import {limitRecipeTitle} from '../../utils/utils';
-import "./Result/Result.css";
+import "./ResultCards.css";
+
 const ResultCards=({recipes})=>{
     const trail = useTrail(
         recipes.length,
