@@ -12,9 +12,9 @@
 }
 
 .SavedRecipes--title{
-    font-family:sans-serif;
+     font-family: 'Cantarell', sans-serif;
     text-transform: uppercase;
-    color: #910000;
+    color: #333;
     font-weight:600;
     letter-spacing: .5em;
 }
