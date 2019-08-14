@@ -10,8 +10,8 @@
 }
 
 path{
-    stroke-dasharray: 10000;
-    stroke-dashoffset: 10000;
+    stroke-dasharray: 100000;
+    stroke-dashoffset: 100000;
     animation: dash 20.5s linear forwards;
 }
 

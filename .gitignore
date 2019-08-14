@@ -8,7 +8,7 @@ dev.js
 /client/node_modules
 # testing
 /coverage
-
+.vscode/settings.json
 # production
 /build
 /backend/node_modules

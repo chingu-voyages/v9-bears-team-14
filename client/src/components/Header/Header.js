@@ -27,7 +27,7 @@ const Header = props => {
     <animated.header style={anims} className="Header--wrapper">
       <div className="Heading__main">
         <span className="Header--Button">
-          <DrawerToggleButton clicked={props.clicked} open={props.open} />
+          <DrawerToggleButton clicked={props.clicked} />
         </span>
         <span className="Heading__title">
           <Link to="/">
