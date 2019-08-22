@@ -16,8 +16,6 @@ Geo Foods is a simple to use application which enables the user to click on an a
 2. Login with OAuth at the upper-left menu with your Google account to save recipes from around the world!
 3. Click on a recipe to see more detailed written step-by-step instructions and even an embedded video from youtube!
 
-# v9-bears-team-14
-=======
 # Description
 
 Geo Foods is a simple to use application which enables the user to click on a marked map to receive information about that part of the world's recipes.
