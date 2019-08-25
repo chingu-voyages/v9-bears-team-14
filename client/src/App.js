@@ -32,13 +32,15 @@ function App() {
   const  drawerRef = useRef(null);
 
   const handleClick = e => {
-    if (drawerRef.current.contains(e.target)) {
+    if (drawerRef.current && drawerRef.current.contains(e.target)) {
       // inside click
       setDrawer(true);
-      return;
+    }
+    else{
+      setDrawer(false);
     }
     // outside click 
-    setDrawer(false);
+    
   };
   return (
     <Router>
