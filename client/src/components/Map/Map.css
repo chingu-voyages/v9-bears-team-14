@@ -1,4 +1,4 @@
-.Map__Wrapper{
+/* .Map__Wrapper{
     width: 100%;
     max-width: 980px;
     margin: 0 auto;
@@ -7,6 +7,34 @@
     padding:2em;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
     margin-top:calc(5vmin);
+} */
+
+.Map__Container{
+  position: relative;
+  height: 0;
+}
+
+@media (max-width:650px){
+  .Map__Container{
+    padding-bottom: calc(60vmin);
+  }
+}
+
+@media(min-width: 651px){
+  .Map__Container{
+    padding-bottom: 50%;
+    /* padding-bottom: calc(100vmin); */
+  }
+}
+
+.Map__Wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:#007399;
+  
 }
 
 path{
